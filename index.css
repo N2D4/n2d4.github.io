@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700') not print;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i') only print;
 
 @media not print {
     .print {
         display: none !important;
     }
 }
+
 @media print {
     .noprint {
         display: none !important;
@@ -13,7 +15,7 @@
 
 
 html {
-    font-family: 'Inconsolata', sans-serif;
+    font-family: 'Inconsolata', monospace;
     background-color: #BDBBBA;
     color: #00000088;
     padding-left: 20px;
@@ -22,8 +24,26 @@ html {
 
 @media print {
     html {
-        background-color: white;
-        color: black;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+a {
+    color: inherit;
+}
+
+html.contrastplus {
+    color: #000000;
+}
+
+b {
+    color: #000000;
+}
+
+@media print {
+    html {
+        background-color: #FFFFFF;
+        color: #000000;
     }
 }
 
@@ -54,6 +74,10 @@ body {
     mix-blend-mode: multiply;
     border: 1px solid #00000099;
     border-radius: 5px;
+}
+
+.contrastplus .linkcontainer > a > img {
+    border-color: #000000;
 }
 
 .linkcontainer > a:hover > img {
