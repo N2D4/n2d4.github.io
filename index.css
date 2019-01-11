@@ -101,7 +101,7 @@ body {
 }
 
 .nowrap {
-    white-space: nowrap;
+    display: inline-block;
 }
 
 .linkcontainer {
