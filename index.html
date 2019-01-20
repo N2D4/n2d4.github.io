@@ -26,7 +26,7 @@
 
     <p class="noprint">
         <span class="nowrap">Konstantin Wohlwend</span>,
-        <span class="nowrap">19yo</span>,
+        <span class="nowrap"><span class="age">19</span>yo</span>,
         <span class="nowrap">2nd year computer science student</span>,
         <span class="nowrap">ETH Zurich</span>,
         <span class="nowrap">Switzerland</span>,
@@ -264,7 +264,7 @@
     </p>
 
     <p style="font-size: 80%;">
-        Last updated Jan 14th, 2019.
+        Last updated Jan 20th, 2019.
     </p>
 
 
@@ -276,6 +276,14 @@
         var arr = document.getElementsByTagName('a');
         for (var i = 0; i < arr.length; i++) {
             arr[i].setAttribute('rel', 'noopener noreferrer');
+        }
+    </script>
+    <script>
+        var dif = Date.now() - new Date(1999, 04, 29).getTime();
+        var age = new Date(dif).getUTCFullYear() - 1970;
+        var arr = document.getElementsByClassName('age');
+        for (var i = 0; i < arr.length; i++) {
+            arr[i].innerText = age;
         }
     </script>
 </body>
