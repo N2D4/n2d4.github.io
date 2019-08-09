@@ -9,6 +9,13 @@
     <meta name="theme-color" content="#BDBBBA"/>
     <base target="_blank">
     <link rel="stylesheet" href="index.css">
+    <style>
+        /** /
+        .unimportant {
+            display: none;
+        }
+        /**/
+    </style>
 </script>
 </head>
 <body>
@@ -34,7 +41,7 @@
     </p>
 
     <p class="print" style="font-size: 80%;">
-        <i>(This is a print/PDF version of my CV. For the up-to-date version, please navigate to <a href="https://n2d4.github.io">n2d4.github.io</a>)</i>
+        <i>(This is a reduced print/PDF version of my CV. For the up-to-date and complete version, please navigate to <a href="https://n2d4.github.io">n2d4.github.io</a>)</i>
     </p>
 
     <div class="noprint linkcontainer">
@@ -113,11 +120,13 @@
                 <td><span class="nowrap">August 2010</span> - <span class="nowrap">July 2017</span></td>
                 <td>
                     <b>Liechtensteinisches Gymasium, Vaduz, Liechtenstein</b><br>
-                    Term papers:
-                    <ul>
-                        <li>In computer science: <a class="noprintdec" href="https://n2d4.github.io/ml-ann/paper.pdf" style="color: inherit;"><cite>Machine Learning and Artificial Neural Networks</cite></a></li>
-                        <li>In philosophy: <cite>Artificial Intelligence and Ethics</cite></li>
-                    </ul>
+                    <span class="unimportant">
+                        Term papers:
+                        <ul>
+                            <li>In computer science: <a class="noprintdec" href="https://n2d4.github.io/ml-ann/paper.pdf" style="color: inherit;"><cite>Machine Learning and Artificial Neural Networks</cite></a></li>
+                            <li>In philosophy: <cite>Artificial Intelligence and Ethics</cite></li>
+                        </ul>
+                    </span>
                 </td>
             </tr>
         </table>
@@ -134,21 +143,24 @@
                 <td><span class="nowrap">July 2019</span> - today</td>
                 <td>
                     <b>Software Engineering Intern, Bloomberg London</b><br>
-                    Designed and developed a service creating a daily personalized summary of the most important market events
+                    Designed and developed a service creating a daily personalized summary of the most important market events<br>
+                    Worked full-stack with Python and JavaScript in a team of motivated engineers in a SCRUM environment
                 </td>
             </tr>
             <tr>
                 <td><span class="nowrap">February 2019</span> - today</td>
                 <td>
-                    <b>Software Developer, uLegale</b> <i class="nowrap">(part-time)</i><br>
-                    Developed the chatbot for a digital lawyer in NodeJS, along with a legal opinion generator and editor running in the browser
+                    <b>Software Engineer, uLegale</b> <i class="nowrap">(part-time)</i><br>
+                    Developed a digital lawyer chatbot in NodeJS for a small lawtech startup, along with a legal opinion generator and editor<br>
+                    Built the entire software infrastructure from scratch, working on the back- and frontend, database management, continuous integration, devops, system administration, and took a leading role in many design decisions
                 </td>
             </tr>
             <tr>
                 <td>February - <span class="nowrap">June 2019</span></td>
                 <td>
                     <b>Research Programmer, ETHZ Network Security Group</b> <i class="nowrap">(part-time)</i><br>
-                    Developed a fully-fletched SSH client and server in Go for the SCION Internet architecture
+                    Developed fully-fletched SSH and netcat clients and servers in Go for the SCION Internet architecture<br>
+                    Allows many existing UNIX tools to be ported to SCION with only very little effort
                 </td>
             </tr>
             <tr>
@@ -156,10 +168,11 @@
                 <td><span class="nowrap">September 2018</span> - <span class="nowrap">January 2019</span></td>
                 <td>
                     <b>Teaching Assistant Discrete Mathematics, ETH Zurich</b> <i class="nowrap">(part-time)</i><br>
-                    Lead an exercise class of 25 students for one semester
+                    Lead an exercise class of 25 students for one semester<br>
+                    Developed an easily accessible exercise generator & solver used by numerous of my students and colleagues (see <i>Selection of Side Projects</i>)
                 </td>
             </tr>
-            <tr>
+            <tr class="unimportant">
                 <td>Summer 2016</td>
                 <td>
                     <b>Development for <cite>Rio 2016 - wir sind dabei!</cite></b><br>
@@ -173,6 +186,76 @@
     <hr class="print">
 
     <p>
+        <h3>
+            Selection of Personal Projects
+        </h3>
+        <table>
+            <tr>
+                <td><span class="nowrap">Winter 2018</span></td>
+                <td>
+                    <b>card-game</b><br>
+                    TypeScript multiplayer implementation of the Swiss card game <cite>Jass</cite> for modern browsers running on NodeJS<br>
+                    <a href="https://github.com/N2D4/card-game">https://github.com/N2D4/card-game</a>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="nowrap">Winter 2018</span></td>
+                <td>
+                    <b>Bobby Trawler</b><br>
+                    A chess computer written from scratch in C++, optimized for performance. Plays better than most humans (eg. myself :( )
+                    <a href="https://github.com/N2D4/bobby-trawler">https://github.com/N2D4/bobby-trawler</a>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="nowrap">Winter 2018</span></td>
+                <td>
+                    <b>Multiple Choices</b><br>
+                    Exercise generator and solver for Discrete Mathematics written in vanilla HTML/CSS/JS, used by numerous students to prepare for their exams. Focus on simplicity, elegance, and intuitiveness<br>
+                    <a href="https://n.ethz.ch/~wohlwenk/kapitel6/">https://n.ethz.ch/~wohlwenk/kapitel6/</a><br>
+                    <a href="https://github.com/N2D4/multiple-choices">https://github.com/N2D4/multiple-choices</a>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="nowrap">Spring 2018</span> - today</td>
+                <td>
+                    <b>Contest Library</b><br>
+                    General purpose Java library containing various data structures such as muiltisets, numerous kinds of trees, special-purpose lists and graphs, and containing algorithms for graph theory, linear algebra, and number theory. Doubling down as a Java source code bundler<br>
+                    Mainly for personal use in programming contests<br>
+                    <a href="https://github.com/N2D4/contest-library">https://github.com/N2D4/contest-library</a>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="nowrap">Summer 2016</span> - <span class="nowrap">Spring 2017</span></td>
+                <td>
+                    <b>Machine Learning and Artificial Neural Networks</b><br>
+                    High-school term paper about reinforcement and supervised learning, teaching a neural network to play simple card games<br>
+                    Complemented with a self-written neural network library for Java<br>
+                    <a href="https://n2d4.github.io/ml-ann/paper.pdf">https://n2d4.github.io/ml-ann/paper.pdf</a><br>
+                    <a href="https://github.com/N2D4/ml-ann">https://github.com/N2D4/ml-ann</a><br>
+                </td>
+            </tr>
+            <tr class="unimportant">
+                <td><span class="nowrap">Spring 2015</span> - <span class="nowrap">Spring 2016</span></td>
+                <td>
+                    <b>sb-server and SBAPI</b><br>
+                    Minigame API for Minecraft multiplayer servers written in Java<br>
+                    Built as an abstraction level on-top of the Bukkit/Spigot plug-in system
+                </td>
+            </tr>
+            <tr class="unimportant">
+                <td><span class="nowrap">Spring 2015</span></td>
+                <td>
+                    <b>Fractal Flames</b><br>
+                    Processing implementation of the Fractal Flames algorithm<br>
+                    <a href="https://github.com/N2D4/processing-fractal-flames">https://github.com/N2D4/processing-fractal-flames</a>
+                </td>
+            </tr>
+        </table>
+    </p>
+
+    <hr class="unimportant print">
+
+    <p class="unimportant">
         <h3>
             Coding Competitions
         </h3>
@@ -197,76 +280,6 @@
             <tr>
                 <td>Google CodeJam 2018</td>
                 <td><b>Rank 1566/24584</b></td>
-            </tr>
-        </table>
-    </p>
-
-    <hr class="print">
-
-    <p>
-        <h3>
-            Selection of Personal Projects
-        </h3>
-        <table>
-            <tr>
-                <td><span class="nowrap">Winter 2018</span></td>
-                <td>
-                    <b>card-game</b><br>
-                    TypeScript implementation of the Swiss card game <cite>Jass</cite> for modern browsers running on NodeJS<br>
-                    <a href="https://github.com/N2D4/card-game">https://github.com/N2D4/card-game</a>
-                </td>
-            </tr>
-            <tr>
-                <td><span class="nowrap">Winter 2018</span></td>
-                <td>
-                    <b>Bobby Trawler</b><br>
-                    A chess computer written from scratch in C++<br>
-                    (It's better than me :( )<br>
-                    <a href="https://github.com/N2D4/bobby-trawler">https://github.com/N2D4/bobby-trawler</a>
-                </td>
-            </tr>
-            <tr>
-                <td><span class="nowrap">Winter 2018</span></td>
-                <td>
-                    <b>Multiple Choices</b><br>
-                    Exercise generator and solver for Discrete Mathematics written in vanilla HTML/CSS/JS, used by numerous of my fellow students as an exam preparation<br>
-                    <a href="https://n.ethz.ch/~wohlwenk/kapitel6/">https://n.ethz.ch/~wohlwenk/kapitel6/</a><br>
-                    <a href="https://github.com/N2D4/multiple-choices">https://github.com/N2D4/multiple-choices</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Spring - <span class="nowrap">Summer 2018</span></td>
-                <td>
-                    <b>Contest Library</b><br>
-                    General purpose Java Library featuring different kinds of algorithms, mainly for personal use in programming contests<br>
-                    <a href="https://github.com/N2D4/contest-library">https://github.com/N2D4/contest-library</a>
-                </td>
-            </tr>
-            <tr>
-                <td><span class="nowrap">Summer 2016</span> - <span class="nowrap">Spring 2017</span></td>
-                <td>
-                    <b>Machine Learning and Artificial Neural Networks</b><br>
-                    High-school term paper about reinforcement and supervised learning<br>
-                    Complemented with a (very basic) neural network library for Java<br>
-                    <a href="https://n2d4.github.io/ml-ann/paper.pdf">https://n2d4.github.io/ml-ann/paper.pdf</a><br>
-                    <a href="https://github.com/N2D4/ml-ann">https://github.com/N2D4/ml-ann</a><br>
-                </td>
-            </tr>
-            <tr>
-                <td><span class="nowrap">Spring 2015</span> - <span class="nowrap">Spring 2016</span></td>
-                <td>
-                    <b>sb-server and SBAPI</b><br>
-                    Minigame API for Minecraft multiplayer servers written in Java<br>
-                    Built as an abstraction level on-top of the Bukkit/Spigot plug-in system
-                </td>
-            </tr>
-            <tr>
-                <td><span class="nowrap">Spring 2015</span></td>
-                <td>
-                    <b>Fractal Flames</b><br>
-                    Processing implementation of the Fractal Flames algorithm<br>
-                    <a href="https://github.com/N2D4/processing-fractal-flames">https://github.com/N2D4/processing-fractal-flames</a>
-                </td>
             </tr>
         </table>
     </p>
