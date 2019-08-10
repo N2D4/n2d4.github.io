@@ -149,6 +149,12 @@ table {
 }
 
 @media print {
+    table {
+        border-spacing: 8px;
+    }
+}
+
+@media print {
     table tr > td {
         page-break-inside: avoid;
     }
