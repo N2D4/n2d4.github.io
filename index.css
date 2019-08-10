@@ -4,6 +4,11 @@
     .print {
         display: none !important;
     }
+
+    body {
+        max-width: 600px;
+        min-width: 300px;
+    }
 }
 
 @media print {
@@ -12,6 +17,10 @@
     }
 }
 
+body {
+    height: 100%;
+    margin: 0px auto;
+}
 
 html {
     font-family: 'Inconsolata', monospace;
@@ -103,13 +112,6 @@ li {
     margin: 0px;
 }
 
-body {
-    max-width: 600px;
-    min-width: 300px;
-    height: 100%;
-    margin: 0px auto;
-}
-
 .nowrap {
     display: inline-block;
 }
@@ -159,7 +161,7 @@ table tr > td {
 table tr > td:first-of-type {
     text-align: right;
     font-weight: bold;
-    width: 37%;
+    width: 30%;
     padding-right: 20px;
 }
 
@@ -168,3 +170,4 @@ table tr > td:first-of-type {
         color: #CCCCCC;
     }
 }
+
