@@ -17,14 +17,9 @@
     }
 }
 
-body {
-    height: 100%;
-    margin: 0px auto;
-}
-
 html {
     font-family: 'Inconsolata', monospace;
-    background-color: #CDCBCA;
+    background-color: #EDEBEA;
     color: #00000088;
     padding-left: 20px;
     padding-right: 20px;
@@ -33,15 +28,28 @@ html {
 @media print {
     html {
         font-family: 'Neue Helvetica', 'Helvetica Neue', 'Helvetica', sans-serif;
-        font-size: 80%;
+        font-size: 70%;
         background-color: #FFFFFF;
         color: #000000;
+        margin-top: 12px;
     }
 }
 
 html.contrastplus {
     background-color: #FFFFFF;
     color: #000000;
+}
+
+body {
+    height: 100%;
+    margin: 0px auto;
+}
+
+@media print {
+    body {
+        border: 2px solid black;
+        padding: 16px;
+    }
 }
 
 a {
@@ -58,8 +66,24 @@ b {
     color: #000000;
 }
 
+div {
+    margin-bottom: 16px;
+}
+
+@media print {
+    div {
+        margin-bottom: 12px;
+    }
+}
+
 sup {
     font-size: 60%;
+}
+
+@media print {
+    sup {
+        font-size: 40%;
+    }
 }
 
 hr {
@@ -68,6 +92,30 @@ hr {
     height: 0px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+ul:not(.compressed) {
+    margin-left: 12px;
+}
+
+ul:not(.compressed) > li {
+    margin-left: 0px;
+    padding: 0px 0px 8px 0px;
+}
+
+@media print {
+    ul:not(.compressed) > li {
+        padding: 0px;
+    }
+}
+
+ul.compressed {
+    margin: 0px;
+}
+
+ul.compressed > li {
+    margin: 0px;
+    padding: 0px;
 }
 
 .contrastplus hr {
@@ -89,12 +137,9 @@ hr.minus {
 
 @media print {
     h1 {
-        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 12px;
     }
-}
-
-h3 {
-    color: #000000;
 }
 
 @media print {
@@ -103,17 +148,62 @@ h3 {
     }
 }
 
-ul, ol {
-    margin: 0px;
-    padding-left: 20px;
+.sectionheader {
+    font-size: 120%;
+    font-weight: bold;
+    color: black;
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
-li {
+@media print {
+    .sectionheader {
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
+}
+
+.cv {
     margin: 0px;
+}
+
+.cv > .cvcol {
+    margin: 0px;
+}
+
+@media print {
+    .cv {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+
+    .cv > .cvcol {
+        width: 49%;
+    }
+}
+
+.textblock {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+@media print {
+    .textblock {
+        text-align: justify;
+    }
 }
 
 .nowrap {
     display: inline-block;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
 }
 
 .linkcontainer {
@@ -150,13 +240,7 @@ table {
 
 @media print {
     table {
-        border-spacing: 8px;
-    }
-}
-
-@media print {
-    table tr > td {
-        page-break-inside: avoid;
+        border-spacing: 6px;
     }
 }
 
@@ -164,11 +248,26 @@ table tr > td {
     vertical-align: top;
 }
 
+@media print {
+    table tr > td {
+        page-break-inside: avoid;
+        padding: 0px;
+    }
+}
+
 table tr > td:first-of-type {
     text-align: right;
     font-weight: bold;
     width: 180px;
     padding-right: 20px;
+}
+
+@media print {
+    table tr > td:first-of-type {
+        width: 70px;
+        font-size: 55%;
+        padding-right: 6px;
+    }
 }
 
 @media print {
