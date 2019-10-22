@@ -6,7 +6,7 @@
     }
 
     body {
-        max-width: 600px;
+        max-width: 700px;
         min-width: 300px;
     }
 }
@@ -198,6 +198,13 @@ hr.minus {
     }
 }
 
+.textblock a {
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+}
+
 .nowrap {
     display: inline-block;
     -webkit-hyphens: none;
@@ -232,6 +239,134 @@ hr.minus {
     opacity: 0.9;
     border: 1px solid #000000;
 }
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    border: 1px solid #00000044;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+.slideshow > .havealook {
+    padding: 16px 16px 16px 16px;
+    margin: 0px;
+    border-bottom: 1px solid #00000044;
+}
+
+.slideshow-container {
+    position: relative;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -o-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
+}
+
+.slideshow-container > .project {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+    margin-bottom: 0px;
+    overflow: scroll;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.slideshow-container > .project > img {
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    width: 35%;
+    font-size: 175%;
+}
+
+.slideshow-container > .project > h1 {
+    margin: 0px;
+    font-size: 175%;
+    color: black;
+}
+
+.slideshow-container > .project > .tagline {
+    margin: 0px;
+}
+
+.slideshow-cntrl-button {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.slideshow-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.slideshow-controls > label {
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: #CCCCCC;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* stop judging my CSS :) */
+#sldshw1:checked ~ .slideshow-controls > label:nth-child(1) { background-color: #888888; }
+#sldshw2:checked ~ .slideshow-controls > label:nth-child(2) { background-color: #888888; }
+#sldshw3:checked ~ .slideshow-controls > label:nth-child(3) { background-color: #888888; }
+#sldshw4:checked ~ .slideshow-controls > label:nth-child(4) { background-color: #888888; }
+#sldshw5:checked ~ .slideshow-controls > label:nth-child(5) { background-color: #888888; }
+#sldshw6:checked ~ .slideshow-controls > label:nth-child(6) { background-color: #888888; }
+#sldshw7:checked ~ .slideshow-controls > label:nth-child(7) { background-color: #888888; }
+#sldshw8:checked ~ .slideshow-controls > label:nth-child(8) { background-color: #888888; }
+#sldshw9:checked ~ .slideshow-controls > label:nth-child(9) { background-color: #888888; }
+#sldshw10:checked ~ .slideshow-controls > label:nth-child(10) { background-color: #888888; }
+#sldshw11:checked ~ .slideshow-controls > label:nth-child(11) { background-color: #888888; }
+#sldshw12:checked ~ .slideshow-controls > label:nth-child(12) { background-color: #888888; }
+#sldshw13:checked ~ .slideshow-controls > label:nth-child(13) { background-color: #888888; }
+#sldshw14:checked ~ .slideshow-controls > label:nth-child(14) { background-color: #888888; }
+#sldshw15:checked ~ .slideshow-controls > label:nth-child(15) { background-color: #888888; }
+#sldshw16:checked ~ .slideshow-controls > label:nth-child(16) { background-color: #888888; }
+#sldshw17:checked ~ .slideshow-controls > label:nth-child(17) { background-color: #888888; }
+#sldshw18:checked ~ .slideshow-controls > label:nth-child(18) { background-color: #888888; }
+#sldshw19:checked ~ .slideshow-controls > label:nth-child(19) { background-color: #888888; }
+#sldshw20:checked ~ .slideshow-controls > label:nth-child(20) { background-color: #888888; }
+
+#sldshw1:checked ~ .slideshow > .slideshow-container { left: -0%; }
+#sldshw2:checked ~ .slideshow > .slideshow-container { left: -100%; }
+#sldshw3:checked ~ .slideshow > .slideshow-container { left: -200%; }
+#sldshw4:checked ~ .slideshow > .slideshow-container { left: -300%; }
+#sldshw5:checked ~ .slideshow > .slideshow-container { left: -400%; }
+#sldshw6:checked ~ .slideshow > .slideshow-container { left: -500%; }
+#sldshw7:checked ~ .slideshow > .slideshow-container { left: -600%; }
+#sldshw8:checked ~ .slideshow > .slideshow-container { left: -700%; }
+#sldshw9:checked ~ .slideshow > .slideshow-container { left: -800%; }
+#sldshw10:checked ~ .slideshow > .slideshow-container { left: -900%; }
+#sldshw11:checked ~ .slideshow > .slideshow-container { left: -1000%; }
+#sldshw12:checked ~ .slideshow > .slideshow-container { left: -1100%; }
+#sldshw13:checked ~ .slideshow > .slideshow-container { left: -1200%; }
+#sldshw14:checked ~ .slideshow > .slideshow-container { left: -1300%; }
+#sldshw15:checked ~ .slideshow > .slideshow-container { left: -1400%; }
+#sldshw16:checked ~ .slideshow > .slideshow-container { left: -1500%; }
+#sldshw17:checked ~ .slideshow > .slideshow-container { left: -1600%; }
+#sldshw18:checked ~ .slideshow > .slideshow-container { left: -1700%; }
+#sldshw19:checked ~ .slideshow > .slideshow-container { left: -1800%; }
+#sldshw20:checked ~ .slideshow > .slideshow-container { left: -1900%; }
 
 table {
     width: 100%;

@@ -19,7 +19,7 @@
 </script>
 </head>
 <body>
-    <a id="inccontrast" class="noprint" style="float: right; font-size: 80%;" href="javascript:void(document.getElementsByTagName('html')[0].classList.add('contrastplus') & document.getElementById('inccontrast').remove())" target="_self">
+    <a id="inccontrast" class="noprint" style="float: right; font-size: 80%;" href="javascript:void(document.getElementsByTagName('html')[0].classList.add('contrastplus') & document.getElementById('inccontrast').remove())" target="_sldshwf">
         [increase contrast]
     </a>
 
@@ -30,7 +30,7 @@
     <div class="noprint">
         <span class="nowrap">Konstantin "Stan" Wohlwend</span>,
         <span class="nowrap"><span class="age">20</span>yo</span>,
-        <span class="nowrap">2nd year computer science student</span>,
+        <span class="nowrap">3rd year computer science student</span>,
         <span class="nowrap">ETH Zurich</span>,
         <span class="nowrap">Switzerland</span>,
         <span class="nowrap">life is great</span>.
@@ -45,33 +45,240 @@
     <div class="print" style="font-size: 80%; text-align: center;">
         <span class="age">20</span> years old, Liechtenstein citizen, speaking German (native) and English (fluent). Based in Zurich, happy to travel!<br>
         Proficient coder in Java, JavaScript, TypeScript and Python, decent in C, C++ and Go
-        
     </div>
 
     <div class="print" style="font-size: 80%; text-align: center;">
-        <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> - <a href="http://n2d4.github.io">n2d4.github.io</a>
+        Check out my portfolio! <a href="http://n2d4.github.io">n2d4.github.io</a>
     </div>
 
-    <div class="noprint linkcontainer">
+    <!-- Kind of ugly, I kind of don't care cuz it's pure CSS :) -->
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw1" checked="checked">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw2">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw3">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw4">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw5">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw6">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw7">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw8">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw9">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw10">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw11">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw12">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw13">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw14">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw15">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw16">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw17">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw18">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw19">
+    <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw20">
+    <!-- to add new slides, add a new <div class="project"> in the slideshow and a label to .slideshow-controls -->
+    <!-- if you want more than 20 radio buttons, adding a button here is not enough, you'll also need to add CSS definitions -->
+
+    <div class="noprint slideshow">
+        <!--div class="havealook">
+            Have a look at some of my favourite side projects!
+        </div-->
+        <div class="slideshow-container">
+            <div class="project">
+                <img src="assets/card-game.png">
+                <h1>🃏 card-game 🃏</h1>
+                <p class="tagline">Playing card games in your web browser</p>
+                <p class="links">
+                    With <a href="https://github.com/janniku9">Jannik Gartmann</a><br>
+                    <a href="https://github.com/N2D4/card-game">Source on GitHub</a>
+                </p>
+                <p class="textblock">
+                    <i>Jass</i> is a card game in the Bézique family, originally played in the Netherlands but since it has quickly gained popularity throughout the entirety of Switzerland. Today, Jass is considered Switzerland's national card game, so understandably people (including us) have been wanting a digital version. However, unfortunately, most of these either run on Adobe Flash or are hidden behind a paywall or tons of ads, so we figured it would be our best bet to start work on our own engine. Furthermore, this allows us to implement variants of the game that are popular in particular parts of Switzerland that many other apps don't support.
+                </p>
+                <p class="textblock">
+                    card-game is written in TypeScript and uses modern JavaScript code, with an emphasis on extendibility. As such, it is not be particularly hard to implement new variants of Jass, or even adapt it to an entirely different type of card games.
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/multiple-choices.png">
+                <h1>✅ multiple-choices ✅</h1>
+                <p class="tagline">Assisting my students in passing the first year</p>
+                <p class="links">
+                    <a href="https://n.ethz.ch/~wohlwenk/kapitel6">Try it online!</a><br>
+                    <a href="https://github.com/N2D4/multiple-choices">Source on GitHub</a>
+                </p>
+                <p class="textblock">
+                    Discrete Mathematics is considered one of the most challenging subjects in the first year of the Computer Science BSc at ETH Zurich. I had the chance to be a teaching assistant during the autumn semester of 2018, leading a group of 25 students through their first semester of Discrete Mathematics. multiple-choices is a tool that uses gamification and a simple and intuitive interface to motivate students to test their knowledge on small but relevant Discrete Maths exercises. It turned out the tool spread a tad bit, so people outside my exercise class got the chance to use it, too! :D
+                </p>
+                <p class="textblock">
+                    card-game is a frontend vanilla HTML/CSS/JS web app. It does not have a serverside counterpart and its only external dependency is a KaTeX, a JavaScript LaTeX renderer.
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/bobby-trawler.png">
+                <h1>♟ bobby-trawler ♟</h1>
+                <p class="tagline">A somewhat stupid chess computer</p>
+                <p class="links">
+                    <a href="https://github.com/N2D4/bobby-trawler">Source on GitHub</a>
+                </p>
+                <p class="textblock">
+                    In 1996, Deep Blue was the first chess computer to defeat the then world champion, Garry Kasparov. In 2019, Bobby Trawler was the first chess computer to defeat me, Stan Wohlwend. Granted, that is not quite true given I've already lost to a good bunch of chess computers before that and it also doesn't say much given I'm a terrible chess player, but it makes for a good introductory line.
+                </p>
+                <p class="textblock">
+                    Bobby Trawler consists of two engines, named Tanner and Daedrian. Tanner is a brute-force engine that simply runs a search on all possible chess moves, using various techniques such as memoization to speed up the process. Daedrian uses a min-max algorithm, allowing it to have more elaborate game plans, but that also means it is less consistent. Because my chess knowledge is limited, the board valuation method is very basic, and also neither of the two engines use an opening book, making Bobby Trawler very vulnerable in the early game. However, if you can not get a decent lead against the computer early on, it becomes hard to defeat in the later stages of the game.
+                </p>
+                <p class="textblock">
+                    A large number of optimizations have been done on the instruction-level to improve performance. As such, I used bitmasks to efficiently check properties of pieces on a given board position, and benchmarking tools to find out which parts of the program we can improve by inlining critical functions and making the program less vulnerable to cache misses.
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/deep-duel.png">
+                <h1>⚔️ Deep Duel ⚔️</h1>
+                <p class="tagline">A 2D multiplayer browser game</p>
+                <p class="links">
+                    With <a href="https://github.com/realChesta">Kyrill Hux</a><br>
+                    <a href="https://github.com/realChesta/deep-duel">Source on GitHub</a><br>
+                </p>
+                <p class="textblock">
+                    Started as a project to make an AI learn a simple fighting game, we never ended up doing that and instead just emphasized on the fighting game part. Deep Duel is a fast-paced multiplayer duel game where you try to out-maneuver your opponent by hitting, dashing and shooting them on a two-dimensional plane.
+                </p>
+                <p class="textblock">
+                    Deep Duel is written in HTML, CSS, and JavaScript, using React for the UX elements, PixiJS for rendering and lance.gg as a multiplayer engine. 
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/contest-library.png">
+                <h1>📚 Contest Library 📚</h1>
+                <p class="tagline">Reusing algorithms at a low performance cost</p>
+                <p class="links">
+                    <a href="https://github.com/N2D4/contest-library">Source on GitHub</a>
+                </p>
+                <p class="textblock">
+                    When participating in competitive programming contests, you often end up using the same algorithms over and over again. For this purpose, I've started putting them into a library where I can re-use them whenever. Being competitive by heart, this library now contains thousands of lines of code and many algorithms and data structures, such as sparse matrices, segment trees, range lists, unboxed lists, multimaps, graphs, flow algorithms, tree traversal, prime number tools, extended Euclid, string utilities, histograms, fast I/O, genetic optimization, and many more. The list is endless. Note that I can't just use third-party libraries as these are forbidden in most contests.
+                </p>
+                <p class="textblock">
+                    The number one emphasis is to understand the algorithms I'm using, usually by reducing them to other algorithms. For example, different types of graphs correspond to different types of matrices - so, adjacency list graph is equivalent to an adjacency matrix graph using a list-of-rows sparse matrix, or Prim's algorithm is really just a special case of A* with a certain heuristics function. This kind of code re-use has been a top priority, as it means that any performance improvement or heuristic I implement on the A* algorithm would subsequently also speed up Prim's.
+                </p>
+                <p class="textblock">
+                    However, it turns out that since most competitive programmers use C++, Java usually is slower, and the fact that I'm using an abstraction above everything does not help. Even though you'd expect constants to not matter that much in these contests, it turns out they do, and especially in Java where boxing and unboxing is the default when working with generic types cache misses will generally do a huge difference. I've spent countless hours optimizing the library so that despite the fact we're using Java, it almost always performs well enough for the contest requirements.
+                </p>
+                <p class="textblock">
+                    Additionally, it also analyzes multiple source code files, eliminates dead classes and merges them into one big file. This is required as most code systems assume you to have your entire code in a single file.
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/ml-ann.png">
+                <h1>🧠 Machine Learning and Artifical Neural Networks 🧠</h1>
+                <p class="tagline">Helping Rachel on her quest to world domination</p>
+                <p class="links">
+                    <a href="https://n2d4.github.io/ml-ann/paper.pdf">Read the paper</a><br>
+                    <a href="https://github.com/N2D4/ml-ann">Source on GitHub</a><br>
+                    <a href="https://n2d4.github.io/ml-ann/qlearner/index.html">Try the Q-Learning tool</a>
+                </p>
+                <p class="textblock">
+                    I've been coding for a long time. Both my high school term papers were about artificial intelligence, one in philosophy and one in computer science. The latter is about helping Rachel, an artificial intelligence running on my computer, learn to play a simple card game so that she can finally take over the world.
+                </p>
+                <p class="textblock">
+                    To achieve her goal, Rachel uses Q-learning to understand the concept of a game state. For this purpose, I've created a tool in Processing (using Java) which visualizes Q-learning, making it easy to understand for humans. You can try this tool online using the link above.
+                </p>
+                <p class="textblock">
+                    Furthermore, I've implemented a simple feed-forward neural network in Java which can be used in conjunction with the Q-Learner, in a very similar fashion to what Google's DeepMind is doing with AlphaGo. It features several different activation functions and error propagation mechanisms. Combining the two allows Rachel to learn this very simple card game. For more information, refer to the paper.
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/fractal-flames.png">
+                <h1>🔥 fractal-flames 🔥</h1>
+                <p class="tagline">Generating nice pictures</p>
+                <p class="links">
+                    <a href="https://github.com/N2D4/processing-fractal-flames">Source and gallery on GitHub</a><br>
+                </p>
+                <p class="textblock">
+                    Invented by Scott Draves in 1992, Fractal Flames build the basis for programs like Electric Sheep and Apophysis. With fractal flames, every initial seed will generate a completely fresh picture. This technique is now commonly used in computer graphics to generate flame-like or chaotic structures.
+                </p>
+                <p class="textblock">
+                    What initially was just supposed to be a high school project started on the weekend before the submission deadline now is a fully working implementation of the original Fractal Flames algorithm, with a bunch of optional tweaks. It's both less efficient and less powerful than modern implementations like those mentioned above - yet still, it can serve as a reference implementation of the algorithm in Processing.
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/sbserver.png">
+                <h1>🎮 SBServer and SBAPI 🎮</h1>
+                <p class="tagline">Developing a Minecraft minigame server with friends</p>
+                <p class="links">
+                    With <a href="https://github.com/janniku9">Jannik Gartmann</a> (and others)
+                </p>
+                <p class="textblock">
+                    In high school, gaming after school has bonded our class together. We've played various video games, one of them the sandbox game <i>Minecraft</i>, famous for many things; amongst them the countless modding and minigame communities. As a joint project, we have been building a Minecraft minigame server - for this, Jannik and I have developed the required mods in Java.
+                </p>
+                <p class="textblock">
+                    We built two main mods. The first is SBAPI, a fully-functioning minigame API. Minecraft was designed for building and not to run minigames, and as such creating minigame mods is a hassle. To avoid this, we built an entire abstraction layer on top of Minecraft, allowing you to build fully-functioning minigames using only our API in only very few lines of code, with in-built protection from glitches.
+                </p>
+                <p class="textblock">
+                    The other mod is SBServer. It contains all the actual logic and minigames of our server. Minigames include KitPvP (players choose one of many kits each unique with abilities, then fight in an arena), Bedwars (players defend their own bed whilst trying to destroy other player's beds), One in the Quiver (everyone gets a bow, every hit is a kill), Lobby Hockey (Hockey, but in Minecraft), and many more. Some of them have already existed before on other servers, but our games have always had unique twists. 
+                </p>
+                <p class="textblock">
+                    The programming was done by Jannik and me, whereas various other friends worked with us on level building and game design/balance. We've also had several game testing sessions to make sure our games are fair. SBServer had been a pet project for all of us for a very long time; in fact, I don't think there's any other project I've contributed as much code to as this one.
+                </p>
+            </div>
+            <div class="project">
+                <h1>...and there's always more!</h1>
+                <p>
+                    Over the past few years, I've almost always had at least one coding project on my to-do list. While some of them I will gladly show to the world, a vast majority of my projects have either never seen the daylight or just aren't worth an entry here. After all, what kind of programmer finishes every side project they've started? :)
+                </p>
+                <p>
+                    Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most notably java.util.Random), a less polished linear algebra version of multiple-choices, a MIPS assembler & emulator, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and more.
+                </p>
+                <p>
+                    If you have any questions regarding any projects on here or would like to contribute, just let me know by dropping a message on <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> :D
+                </p>
+            </div>
+        </div>
+    </div>
+            
+    <div class="noprint slideshow-controls">
+        <label for="sldshw1"></label>
+        <label for="sldshw2"></label>
+        <label for="sldshw3"></label>
+        <label for="sldshw4"></label>
+        <label for="sldshw5"></label>
+        <label for="sldshw6"></label>
+        <label for="sldshw7"></label>
+        <label for="sldshw8"></label>
+        <label for="sldshw9"></label>
+    </div>
+
+    <script>
+        'use strict';
+        // could use CSS animations for this as well...
+        let lastSelected = 1;
+        const interval = setInterval(() => {
+            const prev = document.getElementById('sldshw' + lastSelected);
+            if (!prev.checked) {
+                clearInterval(interval);
+                return;
+            }
+            lastSelected = lastSelected % document.querySelectorAll('.slideshow-controls > label').length + 1;
+            const cur = document.getElementById('sldshw' + lastSelected);
+            cur.checked = true;
+        }, 12000);
+        document.querySelectorAll('.slideshow-controls > label').forEach(a => a.addEventListener('click', () => clearInterval(interval)));
+    </script>
+
+    <!--div class="noprint linkcontainer">
         <a title="E-Mail" href="mailto:n2d4xc@gmail.com">
-            <img src="email-logo.png" alt="E-Mail">
+            <img src="assets/email-logo.png" alt="E-Mail">
         </a>
         <a title="GitHub" href="https://github.com/N2D4">
-            <img src="GitHub-Mark.png" alt="GitHub logo">
+            <img src="assets/GitHub-Mark.png" alt="GitHub logo">
         </a>
         <a title="Multiple Choices" href="https://n.ethz.ch/~wohlwenk/kapitel6?ref=pfp">
-            <img src="checkbox-logo.png" style="width: 80%; padding: 10%;" alt="Multiple Choices">
+            <img src="assets/checkbox-logo.png" style="width: 80%; padding: 10%;" alt="Multiple Choices">
         </a>
-    </div>
-
+    </div-->
+    
     <div class="noprint">
-        ...or see below for my CV! (Which is probably what you came for, anyways.)
+        If you wanna know more about me, take a look at my CV :)
     </div>
 
     <hr class="noprint">
 
 
-    <a class="noprint" style="float: right; font-size: 80%;" href="javascript:void(window.print())" target="_self">
+    <a class="noprint" style="float: right; font-size: 80%;" href="javascript:void(window.print())" target="_sldshwf">
         [print]
     </a>
     
@@ -184,7 +391,7 @@
                             <b>Teaching Assistant Discrete Mathematics, ETH Zurich</b> <i class="nowrap">(part-time)</i><br>
                             <div class="textblock">
                                 Lead an exercise class of 25 students for one semester<br>
-                                Developed an easily accessible exercise generator & solver used by numerous of my students and colleagues (see <i class="nowrap">Selection of Personal Projects</i>)
+                                Developed an easily accessible exercise generator & solver used by numerous of my students and colleagues (see <i class="nowrap">sldshwection of Personal Projects</i>)
                             </div>
                         </td>
                     </tr>
@@ -233,7 +440,7 @@
                         <td>
                             <b>Multiple Choices</b><br>
                             <div class="textblock">
-                                Exercise generator and solver for Discrete Mathematics written using vanilla HTML, CSS and JS, used by numerous students to prepare for their exams. Focus on simplicity, elegance, and intuitiveness<br>
+                                Exercise generator and solver for Discrete Mathematics written using vanilla HTML, CSS and JS, used by numerous students to prepare for their exams. Emphasis on simplicity, elegance, and intuitiveness<br>
                                 <a href="https://n.ethz.ch/~wohlwenk/kapitel6/">https://n.ethz.ch/~wohlwenk/kapitel6/</a><br>
                                 <a href="https://github.com/N2D4/multiple-choices">https://github.com/N2D4/multiple-choices</a>
                             </div>
@@ -275,7 +482,7 @@
                     <tr>
                         <td><span class="nowrap">Spring 2015</span></td>
                         <td>
-                            <b>Fractal Flames</b><br>
+                            <b>processing-fractal-flames</b><br>
                             <div class="textblock">
                                 Processing implementation of the Fractal Flames algorithm<br>
                                 <a href="https://github.com/N2D4/processing-fractal-flames">https://github.com/N2D4/processing-fractal-flames</a>
@@ -322,7 +529,7 @@
         </div>
         <ul>
             <li>Active GitHub and Hackerrank accounts: <a href="https://github.com/N2D4">github.com/N2D4</a> and <a href="https://hackerrank.com/wohlwendk">hackerrank.com/wohlwendk</a></li>
-            <li>Honorable Mention at the IPho International Physics Olympiad 2017 in Indonesia (precise rankings were not released)</li>
+            <li>Honorable Mention at the IPho International Physics Olympiad 2017 in Indonesia</li>
             <li>Member of the Society of Computer Science Students (VIS) at ETH Zurich, working on layouting for our magazine and co-organizing the ICPC local qualifiers</li>
             <li>Commonly organizing social coding afternoons/evenings with friends, showing teamwork and communication skills</li>
             <li>Always looking for fresh experiences!</li>
@@ -336,7 +543,7 @@
     </div>
 
     <div style="font-size: 80%;" class="noprint">
-        Last updated September 23rd, 2019.
+        Last updated October 22nd, 2019.
     </div>
 
 
