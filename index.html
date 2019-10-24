@@ -244,17 +244,30 @@
 
     <script>
         'use strict';
-        // could use CSS animations for this as well...
         let lastSelected = 1;
-        const interval = setInterval(() => {
+        let interval;
+
+        function slplus(i, b) {
+            if (!b) clearInterval(interval);
+            lastSelected += i;
+            const m = document.querySelectorAll('.slideshow-controls > label').length;
+            lastSelected = ((lastSelected - 1) % m + m) % m + 1;
+
+            const cur = document.getElementById('sldshw' + lastSelected);
+            cur.checked = true;
+        }
+        
+        document.addEventListener('keydown', e => e.keyCode === 37 ? slplus(-1) : e.keyCode === 39 && slplus(1));
+
+        // could use CSS animations for this as well...
+        interval = setInterval(() => {
             const prev = document.getElementById('sldshw' + lastSelected);
             if (!prev.checked) {
                 clearInterval(interval);
                 return;
             }
-            lastSelected = lastSelected % document.querySelectorAll('.slideshow-controls > label').length + 1;
-            const cur = document.getElementById('sldshw' + lastSelected);
-            cur.checked = true;
+            
+            slplus(1, true);
         }, 12000);
         document.querySelectorAll('.slideshow-controls > label').forEach(a => a.addEventListener('click', () => clearInterval(interval)));
     </script>
@@ -543,7 +556,7 @@
     </div>
 
     <div style="font-size: 80%;" class="noprint">
-        Last updated October 23rd, 2019.
+        Last updated October 24th, 2019.
     </div>
 
 
