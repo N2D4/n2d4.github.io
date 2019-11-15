@@ -11,7 +11,7 @@
         gtag('config', 'UA-151064305-1');
     </script>
 
-    <title>Stan Wohlwend - Curriculum Vitae</title>
+    <title>Konstantin "Stan" Wohlwend</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Personal page of Konstantin 'N2D4' Wohlwend.">
@@ -114,10 +114,10 @@
                     <a href="https://github.com/N2D4/multiple-choices">Source on GitHub</a>
                 </p>
                 <p class="textblock">
-                    Discrete Mathematics is considered one of the most challenging subjects in the first year of the Computer Science BSc at ETH Zurich. I had the chance to be a teaching assistant during the autumn semester of 2018, leading a group of 25 students through their first semester of Discrete Mathematics. multiple-choices is a tool that uses gamification and a simple and intuitive interface to motivate students to test their knowledge on small but relevant Discrete Maths exercises. It turned out the tool spread a tad bit, so people outside my exercise class got the chance to use it, too! :D
+                    Discrete Mathematics is often considered one of the most challenging subjects in the first year of the Computer Science BSc at ETH Zurich. I had the chance to be a teaching assistant during the autumn semester of 2018, leading a group of 25 Discrete Maths students through their first semester. multiple-choices is a tool that uses gamification and a simple and intuitive interface to motivate students to test their knowledge on multiple choice exercises. It turned out the tool spread a tad bit, so people outside my exercise class got the chance to use it, too! :D
                 </p>
                 <p class="textblock">
-                    multiple-choices is a frontend vanilla HTML/CSS/JS web app. It does not have a serverside counterpart and its only external dependency is KaTeX, a JavaScript LaTeX renderer.
+                    multiple-choices is a frontend vanilla HTML/CSS/JS web app. It does not have a server-side component and its only external dependency is KaTeX, a JavaScript LaTeX renderer.
                 </p>
             </div>
             <div class="project">
@@ -134,7 +134,7 @@
                     Bobby Trawler consists of two engines, named Tanner and Daedrian. Tanner is a brute-force engine that simply runs a search on all possible chess moves, using various techniques such as memoization to speed up the process. Daedrian uses a min-max algorithm, allowing it to have more elaborate game plans, but that also means it is less consistent. Because my chess knowledge is limited, the board valuation method is very basic, and also neither of the two engines use an opening book, making Bobby Trawler very vulnerable in the early game. However, if you can not get a decent lead against the computer early on, it becomes hard to defeat in the later stages of the game.
                 </p>
                 <p class="textblock">
-                    A large number of optimizations have been done on the instruction-level to improve performance. As such, I used benchmarking tools to find out which parts of the program we can improve by inlining critical functions and making the program less vulnerable to cache misses.
+                    A large number of optimizations have been made on the instruction-level to improve performance. As such, I used benchmarking tools to find out which parts of the program we can improve by inlining critical functions and making the program less vulnerable to low-level problems like cache misses.
                 </p>
             </div>
             <div class="project">
@@ -179,13 +179,13 @@
                 <p class="links">
                     <a href="https://n2d4.github.io/ml-ann/paper.pdf">Read the paper</a><br>
                     <a href="https://github.com/N2D4/ml-ann">Source on GitHub</a><br>
-                    <a href="https://n2d4.github.io/ml-ann/qlearner/index.html">Try the Q-Learning tool</a>
+                    <a href="https://n2d4.github.io/ml-ann/qlearner/index.html">Try the Q-Learning visualizer</a>
                 </p>
                 <p class="textblock">
                     I've been coding for a long time. Both my high school term papers were about artificial intelligence, one in philosophy and one in computer science. The latter is about helping Rachel, an artificial intelligence running on my computer, learn to play a simple card game so that she can finally take over the world.
                 </p>
                 <p class="textblock">
-                    To achieve her goal, Rachel uses Q-learning to understand the concept of a game state. For this purpose, I've created a tool in Processing (using Java) which visualizes Q-learning, making it easy to understand for humans. You can try this tool online using the link above.
+                    To achieve her goal, Rachel uses Q-learning to understand the concept of a game state. For this purpose, I've created a visualization tool in Processing (using Java) which helps understanding the concept of Q-learning. You can try this tool online using the link above.
                 </p>
                 <p class="textblock">
                     Furthermore, I've implemented a simple feed-forward neural network in Java which can be used in conjunction with the Q-Learner, in a very similar fashion to what Google's DeepMind is doing with AlphaGo. It features several different activation functions and error propagation mechanisms. Combining the two allows Rachel to learn this very simple card game. For more information, refer to the paper.
@@ -202,7 +202,7 @@
                     Invented by Scott Draves in 1992, Fractal Flames build the basis for programs like Electric Sheep and Apophysis. With fractal flames, every initial seed will generate a completely fresh picture. This technique is now commonly used in computer graphics to generate flame-like or chaotic structures.
                 </p>
                 <p class="textblock">
-                    What initially was just supposed to be a high school project started on the weekend before the submission deadline now is a fully working implementation of the original Fractal Flames algorithm, with a bunch of optional tweaks. It's both less efficient and less powerful than modern implementations like those mentioned above - yet still, it can serve as a reference implementation of the algorithm in Processing.
+                    What initially was just supposed to be a high school project for computer science class is now a fully working implementation of the original Fractal Flames algorithm, with a bunch of optional tweaks. It's both less efficient and less powerful than modern implementations like those mentioned above - yet still, it can serve as a reference implementation of the algorithm in Processing.
                 </p>
             </div>
             <div class="project">
@@ -216,10 +216,10 @@
                     During high school, gaming after school has bonded our class together. One of the video games we played is known under the name <i>Minecraft</i>, famous for many things; amongst them the countless modding and minigame communities. In a group of friends, we had been building a Minecraft minigame server - for this, Jannik and I have coded the required mods in Java.
                 </p>
                 <p class="textblock">
-                    The server for the most part consists of two mods. The first is SBAPI, a fully-functioning minigame API. Minecraft is a sandbox game and not a minigame toolkit, and as such creating minigame mods is a hassle. To make this a little easier, we built an entire abstraction layer on top of Minecraft, allowing you to build fully-functioning minigames using only our API in only very few lines of code, while leaving all the world generation, match-making, glitch prevention etc. to the API.
+                    The server is mainly built from two mods. The first is SBAPI, a minigame API. Minecraft is a sandbox game and not a minigame toolkit, and as such creating minigame mods is a hassle. To make this a little easier, we built an entire abstraction layer on top of Minecraft, allowing you to build customizable minigames using only our API in a few lines of code, while leaving all the world generation, match-making, glitch prevention etc. to the API.
                 </p>
                 <p class="textblock">
-                    The other mod is SBServer. It contains all the actual logic and minigames of our server. Minigames include KitPvP (players choose one of many kits each unique with abilities, then fight in an arena), Bedwars (players defend their own bed whilst trying to destroy other player's beds), One in the Quiver (everyone gets a bow, every hit is a kill), Lobby Hockey (ice hockey, but in Minecraft), and many more. Most of them have already existed before on other servers, but our games have always had unique twists.
+                    The other mod is SBServer. It contains the actual game logic and concepts of our server. Minigames include KitPvP (players choose one of many kits each unique with abilities, then fight in an arena), Bedwars (players defend their own bed whilst trying to destroy other player's beds), One in the Quiver (everyone gets a bow, every hit is a kill), Lobby Hockey (ice hockey, but in Minecraft), and many more. Most of them have already existed before on other servers, but our games have always had unique twists.
                 </p>
                 <p class="textblock">
                     The programming was done by Jannik and me, whereas various other friends worked with us on level building and game design/balance. We've also had several game testing sessions with a broader circle of friends to make sure our games are fair. SBServer had been a pet project for all of us for a very long time; in fact, I don't think there's any other project I've contributed as much code to as this one.
@@ -566,7 +566,7 @@
     </div>
 
     <div style="font-size: 80%;" class="noprint">
-        Last updated October 24th, 2019.
+        Last updated November 14th, 2019.
     </div>
 
 
