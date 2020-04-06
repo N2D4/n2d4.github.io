@@ -61,7 +61,7 @@
         Check out my portfolio! <a href="http://n2d4.github.io">n2d4.github.io</a>
     </div>
 
-    <!-- Kind of ugly, I kind of don't care cuz it's pure CSS :) -->
+    <!-- Kind of ugly, but the fact that it's a pure CSS slideshow makes up for it doesn't it :) -->
     <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw1" checked="checked">
     <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw2">
     <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw3">
@@ -83,12 +83,9 @@
     <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw19">
     <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw20">
     <!-- to add new slides, add a new <div class="project"> in the slideshow and a label to .slideshow-controls -->
-    <!-- if you want more than 20 radio buttons, adding a button here is not enough, you'll also need to add CSS definitions -->
+    <!-- if you want more than 20 radio buttons, adding a radio here is not enough, you'll also need to add CSS definitions -->
 
     <div class="noprint slideshow">
-        <!--div class="havealook">
-            Have a look at some of my favourite side projects!
-        </div-->
         <div class="slideshow-container">
             <div class="project">
                 <img src="assets/card-game.png">
@@ -96,13 +93,14 @@
                 <p class="tagline">Playing card games in your web browser</p>
                 <p class="links">
                     With <a href="https://github.com/janniku9">Jannik Gartmann</a><br>
+                    <a href="https://jass.n2d4.com">Play it online!</a>
                     <a href="https://github.com/N2D4/card-game">Source on GitHub</a>
                 </p>
                 <p class="textblock">
-                    <i>Jass</i> is a card game in the Bézique family, originally played in the Netherlands but since it has quickly gained popularity throughout the entirety of Switzerland. Today, Jass is considered Switzerland's national card game, so understandably people (including us) have been wanting a digital version. However, unfortunately, most of these either run on Adobe Flash or are hidden behind a paywall or tons of ads, so we figured it would be our best bet to start work on our own engine. Furthermore, this allows us to implement variants of the game that are popular in particular parts of Switzerland that many other apps don't support.
+                    <i>Jass</i> is a card game in the Bézique family, originally played in the Netherlands but since then it has quickly gained popularity throughout the entirety of Switzerland. Today, Jass is considered Switzerland's national card game, so understandably demand for a digital version is huge. However, unfortunately we were very unsatisfied with the choices we had as many online-Jass portals run on Adobe Flash, while others are hidden behind a paywall or tons of ads, so we figured it would be our best bet to start work on our own engine. This way, we can also implement variants of the game that are popular in only small parts of Switzerland that many other apps don't support.
                 </p>
                 <p class="textblock">
-                    card-game is written in TypeScript and uses modern JavaScript code, with an emphasis on extendibility. As such, it is not particularly hard to implement new variants of Jass, or even adapt it to an entirely different type of card games.
+                    card-game is written in TypeScript and uses a modern, ES6-based coding style. One of our design goals was to make it easily adaptable to new game modes, meaning with just a few lines of code you can implement entirely new variants of Jass. In fact, because everything is modular, it could be easily transformed into an engine for any other card game.
                 </p>
             </div>
             <div class="project">
@@ -114,10 +112,10 @@
                     <a href="https://github.com/N2D4/multiple-choices">Source on GitHub</a>
                 </p>
                 <p class="textblock">
-                    Discrete Mathematics is often considered one of the most challenging subjects in the first year of the Computer Science BSc at ETH Zurich. I had the chance to be a teaching assistant during the autumn semester of 2018, leading a group of 25 Discrete Maths students through their first semester. multiple-choices is a tool that uses gamification and a simple and intuitive interface to motivate students to test their knowledge on multiple choice exercises. It turned out the tool spread a tad bit, so people outside my exercise class got the chance to use it, too! :D
+                    Discrete Mathematics is often considered one of the most challenging subjects in the first year of the Computer Science Bachelor at ETH Zurich. I had the chance to be a teaching assistant during the autumn semester of 2018, leading a group of 25 Discrete Maths students through their first semester. multiple-choices is a tool that uses gamification and a simple and intuitive interface to motivate students to test their knowledge using multiple choice exercises. It turned out the tool spread a tad bit, so people outside my exercise class got the chance to use it, too! :D
                 </p>
                 <p class="textblock">
-                    multiple-choices is a frontend vanilla HTML/CSS/JS web app. It does not have a server-side component and its only external dependency is KaTeX, a JavaScript LaTeX renderer.
+                    multiple-choices is a frontend vanilla HTML/CSS/JS web app. It runs entirely in the user's browser and its only external dependency is KaTeX, a JavaScript LaTeX renderer.
                 </p>
             </div>
             <div class="project">
@@ -131,7 +129,7 @@
                     In 1996, Deep Blue was the first chess computer to defeat the then world champion, Garry Kasparov. In 2019, Bobby Trawler was the first chess computer to defeat me, Stan Wohlwend. Granted, that is not quite true given I've already lost to a good bunch of chess computers before that and it also doesn't say much given I'm a terrible chess player, but it makes for a good introductory line.
                 </p>
                 <p class="textblock">
-                    Bobby Trawler consists of two engines, named Tanner and Daedrian. Tanner is a brute-force engine that simply runs a search on all possible chess moves, using various techniques such as memoization to speed up the process. Daedrian uses a min-max algorithm, allowing it to have more elaborate game plans, but that also means it is less consistent. Because my chess knowledge is limited, the board valuation method is very basic, and also neither of the two engines use an opening book, making Bobby Trawler very vulnerable in the early game. However, if you can not get a decent lead against the computer early on, it becomes hard to defeat in the later stages of the game.
+                    Bobby Trawler consists of two engines, namely Tanner and Daedrian. Tanner is a brute-force engine that simply runs a search on all possible chess moves, using various techniques such as memoization to speed up the process. Daedrian uses a min-max algorithm, allowing it to have more elaborate game plans, but that also means it is less consistent. Because my chess knowledge is limited, the board valuation method is very basic, and also neither of the two engines use an opening book, making Bobby Trawler very vulnerable in the early game. However, if you can not get a decent lead against the computer early on, it becomes hard to defeat in the later stages of the game.
                 </p>
                 <p class="textblock">
                     A large number of optimizations have been made on the instruction-level to improve performance. As such, I used benchmarking tools to find out which parts of the program we can improve by inlining critical functions and making the program less vulnerable to low-level problems like cache misses.
@@ -146,7 +144,7 @@
                     <a href="https://github.com/realChesta/deep-duel">Source on GitHub</a><br>
                 </p>
                 <p class="textblock">
-                    Started as a project to make an AI learn a simple fighting game, we never ended up doing that and instead just emphasized on the fighting game part. Deep Duel is a fast-paced multiplayer duel game where you try to out-maneuver your opponent by hitting, dashing and shooting them on a two-dimensional plane.
+                    While we initially started Deep Duel with the goal of making an AI learn to play a simple fighting game, we never ended up doing that and instead just emphasized on the fighting game part. Deep Duel is a fast-paced multiplayer duel game where you try to out-maneuver your opponent by hitting, dashing and shooting them on a two-dimensional plane.
                 </p>
                 <p class="textblock">
                     Deep Duel is written in HTML, CSS, and JavaScript, using React for the UX elements, PixiJS for rendering and lance.gg as a multiplayer engine. 
@@ -169,7 +167,7 @@
                     It turns out that most competitive programmers use C++, and the exercises sometimes even expect you to. Java usually is slower, and the fact that I'm using an abstraction above everything does not help. Even though you'd expect constants to not matter in these contests, it turns out they do, and especially in Java where boxing and unboxing primitives is the default when working with generic types cache misses will generally do a huge difference. The library uses several tricks (eg. primitive collections) and heuristics (eg. using a linear search list instead of a hash map for small maps) to combat this.
                 </p>
                 <p class="textblock">
-                    Additionally, it does some other jobs that can be useful during a contest; it has a built-in (disk) caching feature for large pre-processed data, reads input and output files, off-loads work onto multiple threads, bundles and compresses multiple source code files into one big file, and eliminates unneeded classes.
+                    Additionally, it performs some other jobs that can be useful during a contest; it has a built-in (disk) caching feature for large pre-processed data, reads input and output files, automatically off-loads work onto multiple threads, bundles and compresses multiple source code files into one big file, and eliminates unneeded classes.
                 </p>
             </div>
             <div class="project">
@@ -185,10 +183,10 @@
                     I've been coding for a long time. Both my high school term papers were about artificial intelligence, one in philosophy and one in computer science. The latter is about helping Rachel, an artificial intelligence running on my computer, learn to play a simple card game so that she can finally take over the world.
                 </p>
                 <p class="textblock">
-                    To achieve her goal, Rachel uses Q-learning to understand the concept of a game state. For this purpose, I've created a visualization tool in Processing (using Java) which helps understanding the concept of Q-learning. You can try this tool online using the link above.
+                    To achieve her goal, Rachel uses Q-learning to understand the concept of a game state. For this purpose, I've created a visualization tool in Processing (using Java) which helps readers understand the concept of Q-learning. You can try this tool online using the link above.
                 </p>
                 <p class="textblock">
-                    Furthermore, I've implemented a simple feed-forward neural network in Java which can be used in conjunction with the Q-Learner, in a very similar (but heavily simplified!) fashion to what Google's DeepMind is doing with AlphaGo. It features several different activation functions and error propagation mechanisms. Combining the two allows Rachel to learn this very simple card game. For more information, refer to the paper.
+                    Furthermore, I've implemented a simple feed-forward neural network in Java which can be used in conjunction with the Q-Learner, in a very similar (but heavily simplified!) fashion to what Google's DeepMind is doing with AlphaGo. It features several different activation functions and error propagation mechanisms. Combining the two allows Rachel to learn a very simple card game. For more information, please take a look at the paper! :D
                 </p>
             </div>
             <div class="project">
@@ -199,7 +197,7 @@
                     <a href="https://github.com/N2D4/processing-fractal-flames">Source and gallery on GitHub</a><br>
                 </p>
                 <p class="textblock">
-                    Invented by Scott Draves in 1992, Fractal Flames build the basis for programs like Electric Sheep and Apophysis. With fractal flames, every initial seed will generate a completely fresh picture. This technique is now commonly used in computer graphics to generate flame-like or chaotic structures.
+                    Invented by Scott Draves in 1992, Fractal Flames build the basis for programs like Electric Sheep and Apophysis. The algorithm procedurally creates nice-looking pictures from only a single initial seed. This technique is now commonly used in computer graphics to generate flame-like or chaotic structures.
                 </p>
                 <p class="textblock">
                     What initially was just supposed to be a high school project for computer science class is now a fully working implementation of the original Fractal Flames algorithm, with a bunch of optional tweaks. It's both less efficient and less powerful than modern implementations like those mentioned above - yet still, it can serve as a reference implementation of the algorithm in Processing.
@@ -213,13 +211,13 @@
                     With <a href="https://github.com/janniku9">Jannik Gartmann</a> (and others)
                 </p>
                 <p class="textblock">
-                    During high school, gaming after school has bonded our class together. One of the video games we played is known under the name <i>Minecraft</i>, famous for many things; amongst them the countless modding and minigame communities. In a group of friends, we had been building a Minecraft minigame server - for this, Jannik and I have coded the required mods in Java.
+                    During high school, gaming after school has bonded our class together. One of the video games we played is called <i>Minecraft</i>, famous for many things; amongst them the countless modding and minigame communities. In a group of friends, we had been building a Minecraft minigame server - for this, Jannik and I have coded the required mods in Java.
                 </p>
                 <p class="textblock">
-                    The server is mainly built from two mods. The first is SBAPI, a minigame API. Minecraft is a sandbox game and not a minigame toolkit, and as such creating minigame mods is a hassle. To make this a little easier, we built an entire abstraction layer on top of Minecraft, allowing you to build customizable minigames using only our API in a few lines of code, while leaving all the world generation, match-making, glitch prevention etc. to the API.
+                    The architecture is split into two mods. The first is SBAPI, a minigame API. Minecraft is a sandbox game and not a minigame toolkit, and as such creating minigame mods is a hassle. To make this a little easier, we built an entire abstraction layer on top of Minecraft, allowing you to build customizable minigames using only our API in a few lines of code, while leaving all the world generation, match-making, glitch prevention etc. to the API.
                 </p>
                 <p class="textblock">
-                    The other mod is SBServer. It contains the actual game logic and concepts of our server. Minigames include KitPvP (players choose one of many kits each unique with abilities, then fight in an arena), Bedwars (players defend their own bed whilst trying to destroy other players' beds), One in the Quiver (everyone gets a bow, every hit is a kill), Lobby Hockey (ice hockey, but in Minecraft), and many more. Most of them have already existed before on other servers, but our games have always had unique twists.
+                    The other mod is SBServer. It contains the actual game logic and concepts of our server. Minigames include KitPvP (players choose one of many kits each unique with abilities, then fight in an arena), Bedwars (players defend their own bed whilst trying to destroy other players' beds), One in the Quiver (everyone gets a bow, every hit is a kill), Lobby Hockey (ice hockey, but in Minecraft), and many more. Most of these are popular games on many Minecraft servers among the community, but all our games always have unique features and twists which make them somewhat different.
                 </p>
                 <p class="textblock">
                     The programming was done by Jannik and me, whereas various other friends worked with us on level building and game design/balance. We've also had several game testing sessions with a broader circle of friends to make sure our games are fair. SBServer had been a pet project for all of us for a very long time; in fact, I don't think there's any other project I've contributed as much code to as this one.
@@ -231,10 +229,10 @@
                     Over the past few years, I've almost always had at least one coding project on my to-do list. While some of them I will gladly show to the world, a vast majority of my projects have either never seen the daylight or just aren't worth an entry here. After all, what kind of programmer finishes every side project they've started? :)
                 </p>
                 <p class="textblock">
-                    Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most notably java.util.Random), a less polished linear algebra version of multiple-choices, a MIPS assembler & emulator, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and more.
+                    Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most notably java.util.Random), <a href="https://cfour.n2d4.com">a very hacky Connect-Four game</a> written in a few hours, a less polished linear algebra version of multiple-choices, a MIPS assembler & emulator, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and more.
                 </p>
                 <p class="textblock">
-                    If you have any questions regarding any projects on here or would like to contribute, just let me know by dropping a message on <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> :D
+                    If you have any questions, drop me a message on <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> :D
                 </p>
             </div>
         </div>
@@ -352,7 +350,7 @@
                         <td>
                             <b>Bachelor of Computer Science, ETH Zurich, Switzerland</b><br>
                             Expected graduation date: February 2021<br>
-                            GPA: 5.3<sup class="noprint">1</sup><span class="print">*</span>
+                            GPA: 5.2<sup class="noprint">1</sup><span class="print">*</span>
                         </td>
                     </tr>
                     <tr>
@@ -453,7 +451,7 @@
                         <td>
                             <b>Bobby Trawler</b><br>
                             <div class="textblock">
-                                A chess computer written from scratch in C++, optimized for performance. Plays better than most humans<br>
+                                A chess computer written from scratch in C++, optimized for performance. Can beat most humans<br>
                                 <a href="https://github.com/N2D4/bobby-trawler">https://github.com/N2D4/bobby-trawler</a>
                             </div>
                         </td>
@@ -553,7 +551,7 @@
         <ul>
             <li>Active GitHub and Hackerrank accounts: <a href="https://github.com/N2D4">github.com/N2D4</a> and <a href="https://hackerrank.com/wohlwendk">hackerrank.com/wohlwendk</a></li>
             <li>Honorable Mention at the IPho International Physics Olympiad 2017 in Indonesia</li>
-            <li>Member of the Society of Computer Science Students (VIS) at ETH Zurich, working on layouting for our magazine and co-organizing the ICPC local qualifiers</li>
+            <li>Member of the Society of Computer Science Students (VIS) at ETH Zurich, having worked (amongst other things) on layouting for our magazine and co-organizing coding competitions</li>
             <li>Always looking for fresh experiences!</li>
         </ul>
     </div>
@@ -565,7 +563,7 @@
     </div>
 
     <div style="font-size: 80%;" class="noprint">
-        Last updated February 16th, 2020.
+        Last updated April 6th, 2020.
     </div>
 
 
