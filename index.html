@@ -34,12 +34,12 @@
     </a>
 
     <h1 class="noprint">
-        <i>shout</i>("<b>Hey!</b>")
+        <i>shout</i>("<b>Heyo!</b>")
     </h1>
 
     <div class="noprint">
         <span class="nowrap">Konstantin "Stan" Wohlwend</span>,
-        <span class="nowrap"><span class="age">20</span>yo</span>,
+        <span class="nowrap"><span class="age">21</span>yo</span>,
         <span class="nowrap">3rd year computer science student</span>,
         <span class="nowrap">ETH Zurich</span>,
         <span class="nowrap">Switzerland</span>,
@@ -53,7 +53,7 @@
     </h1>
 
     <div class="print" style="font-size: 80%; text-align: center;">
-        <span class="age">20</span> years old, Liechtenstein citizen, speaking German (native) and English (fluent). Based in Zurich, happy to travel!<br>
+        <span class="age">21</span> years old, Liechtenstein citizen, speaking German (native) and English (fluent). Based in Zurich, happy to travel!<br>
         Proficient coder in Java, JavaScript, TypeScript and Python, decent in C, C++ and Go
     </div>
 
@@ -226,7 +226,7 @@
             <div class="project">
                 <h1>...and there's always more!</h1>
                 <p class="textblock">
-                    Over the past few years, I've almost always had at least one coding project on my to-do list. While some of them I will gladly show to the world, a vast majority of my projects have either never seen the daylight or just aren't worth an entry here. After all, what kind of programmer finishes every side project they've started? :)
+                    Over the past few years, I've almost always had at least one coding project on my to-do list. While some of them I will gladly show to the world, a vast majority of my projects have either never seen the daylight or just aren't worth an entry here. After all, what kind of programmer finishes every side project they start? :)
                 </p>
                 <p class="textblock">
                     Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most notably java.util.Random), <a href="https://cfour.n2d4.com" style="color: inherit;">a very hacky Connect-Four game</a> written in a few hours, a less polished linear algebra version of multiple-choices, a MIPS assembler & emulator, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and more.
@@ -265,7 +265,7 @@
             cur.checked = true;
         }
         
-        document.addEventListener('keydown', e => e.keyCode === 37 ? slplus(-1) : e.keyCode === 39 && slplus(1));
+        document.addEventListener('keydown', e => (f => f && slplus(f))({37: -1, 39: 1}[e.keyCode]));
 
         // could use CSS animations for this as well...
         interval = setInterval(() => {
@@ -316,10 +316,10 @@
                     </tr>
                     <tr>
                         <td>E-Mail</td>
-                        <td><b>
-                            <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a><br>
-                            <a href="mailto:wohlwenk@student.ethz.ch">wohlwenk@student.ethz.ch</a>
-                        </b></td>
+                        <td>
+                            <b><a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a></b> <i>(preferred)</i><br>
+                            <b><a href="mailto:wohlwenk@student.ethz.ch">wohlwenk@student.ethz.ch</a></b>
+                        </td>
                     </tr>
                     <tr>
                         <td>Languages</td>
@@ -334,7 +334,7 @@
                             <b>Python</b>,
                             <b>C</b>,
                             <b>C++</b>
-                            <i>(in no particular order)</i>
+                            <span class="nowrap"><i>(in no particular order)</i></span>
                         </td>
                     </tr>
                 </table>
@@ -374,6 +374,15 @@
                     Experience
                 </div>
                 <table>
+                    <tr>
+                        <td><span class="nowrap">June 2020</span> - <span class="nowrap">August 2020</span></td>
+                        <td>
+                            <b>Software Engineering Intern, Google Zurich</b><br>
+                            <div class="textblock">
+                                TBD
+                            </div>
+                        </td>
+                    </tr>
                     <tr>
                         <td><span class="nowrap">July 2019</span> - <span class="nowrap">September 2019</span></td>
                         <td>
@@ -437,7 +446,7 @@
                 </div>
                 <table>
                     <tr>
-                        <td><span class="nowrap">Winter 2018</span></td>
+                        <td><span class="nowrap">Winter 2018</span> - today</td>
                         <td>
                             <b>card-game</b><br>
                             <div class="textblock">
@@ -549,7 +558,7 @@
             More About Me
         </div>
         <ul>
-            <li>Active GitHub and Hackerrank accounts: <a href="https://github.com/N2D4">github.com/N2D4</a> and <a href="https://hackerrank.com/wohlwendk">hackerrank.com/wohlwendk</a></li>
+            <li>Active GitHub and not-so-active Hackerrank accounts: <a href="https://github.com/N2D4">github.com/N2D4</a> and <a href="https://hackerrank.com/wohlwendk">hackerrank.com/wohlwendk</a></li>
             <li>Honorable Mention at the IPho International Physics Olympiad 2017 in Indonesia</li>
             <li>Member of the Society of Computer Science Students (VIS) at ETH Zurich, having worked (amongst other things) on layouting for our magazine and co-organizing coding competitions</li>
             <li>Always looking for fresh experiences!</li>
@@ -563,7 +572,7 @@
     </div>
 
     <div style="font-size: 80%;" class="noprint">
-        Last updated April 6th, 2020.
+        Last updated June 27th, 2020.
     </div>
 
 
