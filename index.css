@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700') not print;
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,500,700') not print;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap') print;
 
 @media not print {
     .print {
@@ -27,8 +28,8 @@ html {
 
 @media print {
     html {
-        font-family: 'Neue Helvetica', 'Helvetica Neue', 'Helvetica', sans-serif;
-        font-size: 65%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 67%;
         background-color: #FFFFFF;
         color: #000000;
         margin-top: 16px;
@@ -43,13 +44,6 @@ html.contrastplus {
 body {
     height: 100%;
     margin: 0px auto;
-}
-
-@media print {
-    body {
-        border: 2px solid black;
-        padding: 16px;
-    }
 }
 
 a {
@@ -72,7 +66,7 @@ div {
 
 @media print {
     div {
-        margin-bottom: 12px;
+        margin-bottom: 6px;
     }
 }
 
@@ -92,6 +86,11 @@ hr {
     height: 0px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 ul:not(.compressed) {
@@ -149,17 +148,37 @@ hr.minus {
 }
 
 .sectionheader {
-    font-size: 120%;
+    font-size: 130%;
     font-weight: bold;
     color: black;
-    margin-top: 24px;
+    margin-top: 32px;
     margin-bottom: 16px;
 }
 
 @media print {
-    .sectionheader {
+    .sectionheader.withprintsub {
         margin-top: 0px;
-        margin-bottom: 8px;
+        margin-bottom: 0px;
+    }
+
+    .sectionheader:not(.withprintsub) {
+        margin-top: 0px;
+        margin-bottom: 4px;
+    }
+
+    .sectionsubheader {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}
+
+.largesection {
+    margin-bottom: 12px;
+}
+
+@media print {
+    .largesection {
+        margin-bottom: 16px;
     }
 }
 
@@ -180,8 +199,12 @@ hr.minus {
         margin-top: 24px;
     }
 
-    .cv > .cvcol {
-        width: 49%;
+    .cv > .cvcol.multi {
+        width: 61%;
+    }
+
+    .cv > .cvcol.single {
+        width: 36%;
     }
 }
 
@@ -203,6 +226,16 @@ hr.minus {
     -ms-hyphens: none;
     -moz-hyphens: none;
     hyphens: none;
+}
+
+.textblock b {
+    font-weight: 500;
+}
+
+@media print {
+    .textblock b {
+        font-weight: 600;
+    }
 }
 
 .nowrap {
@@ -368,6 +401,10 @@ hr.minus {
 #sldshw19:checked ~ .slideshow > .slideshow-container { left: -1800%; }
 #sldshw20:checked ~ .slideshow > .slideshow-container { left: -1900%; }
 
+.tbtitle {
+    font-size: 115%;
+}
+
 table {
     width: 100%;
     table-layout: fixed;
@@ -375,7 +412,7 @@ table {
 
 @media print {
     table {
-        border-spacing: 6px;
+        border-spacing: 6px 8px;
     }
 }
 
@@ -397,17 +434,20 @@ table tr > td:first-of-type {
     padding-right: 20px;
 }
 
-@media print {
-    table tr > td:first-of-type {
-        width: 70px;
-        font-size: 55%;
-        padding-right: 6px;
-    }
+table tr > td:first-of-type i {
+    font-weight: normal;
 }
 
 @media print {
-    table tr > td:first-of-type {
+    .cvcol.multi table tr > td:first-of-type {
+        width: 90px;
+        font-size: 55%;
+        padding-right: 6px;
         color: #CCCCCC;
+    }
+
+    .cvcol.single table tr > td:first-of-type {
+        display: none;
     }
 }
 
