@@ -29,12 +29,18 @@
 </script>
 </head>
 <body>
-    <a id="inccontrast" class="noprint" style="float: right; font-size: 80%;" onclick="document.getElementsByTagName('html')[0].classList.add('contrastplus') & document.getElementById('inccontrast').remove()" href="javascript:void(0)" target="_self">
-        [increase contrast]
-    </a>
+    <div id="stylecontainer">
+        <a id="darkmode" class="noprint titlecol" style="float: right; font-size: 80%;" onclick="document.getElementsByTagName('html')[0].classList.toggle('darkmode')" href="javascript:void(0)" target="_self"></a><br>
+        <a id="inccontrast" class="noprint titlecol" style="float: right; font-size: 80%;" onclick="document.getElementsByTagName('html')[0].classList.toggle('contrastplus')" href="javascript:void(0)" target="_self"></a>
+    </div>
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementsByTagName('html')[0].classList.add('darkmode');
+        }
+    </script>
 
-    <h1 class="noprint">
-        <i>shout</i>("<b>Heyo!</b>")
+    <h1 class="noprint shout">
+        <i>shout</i>("<b class="hilitecol">Heyo!</b>")
     </h1>
 
     <div class="noprint">
@@ -135,12 +141,35 @@
                     Bobby Trawler consists of two engines, namely Tanner and Daedrian. Tanner is a brute-force engine that simply runs a search on all possible chess moves, using various techniques such as memoization to speed up the process. Daedrian uses a min-max algorithm, allowing it to have more elaborate game plans, but that also means it is less consistent. Because my chess knowledge is limited, the board valuation method is very basic, and also neither of the two engines use an opening book, making Bobby Trawler very vulnerable in the early game. However, if you can not get a decent lead against the computer early on, it becomes hard to defeat in the later stages of the game.
                 </p>
                 <p class="textblock">
-                    A large number of optimizations have been made on the instruction-level to improve performance. As such, I used benchmarking tools to find out which parts of the program we can improve by inlining critical functions and making the program less vulnerable to low-level problems like cache misses.
+                    I've made a lot of optimizations on the assembly level to improve performance. By using benchmarking tools and analyzing compiler output, I found out which parts of the program can be improved by inlining critical functions and making the program less vulnerable to low-level issues like cache misses.
+                </p>
+            </div>
+            <div class="project">
+                <img src="assets/evil-inc.png">
+                <h1>🚩 Evil Inc. 🚩</h1>
+                <p class="tagline">A somewhat sophisticated beginner CTF</p>
+                <p class="links">
+                    <a href="https://github.com/N2D4/evil-inc">Source on GitHub</a><br>
+                </p>
+                <p class="textblock">
+                    <b>SPOILER WARNING!</b> If you're planning on trying this challenge yourself, stop reading right now.
+                </p>
+                <p class="textblock">
+                    Oh no! Evil Inc., a secretive organisation with the sole goal of total annihilation is about to destroy the universe and no one can stop them! No one? No, not quite! There is still hope, as there is a smart hacker on their mission to break into Evil Inc.'s systems and save the world! (That smart hacker is you.)
+                </p>
+                <p class="textblock">
+                    Yea, that's cheesy. But I need to hype it up somehow. Computer security is all about breaking into things, and in Evil Inc. your goal is to break into a server and steal a secret flag given just their website.
+                </p>
+                <p class="textblock">
+                    The player starts by doing simple attacks like SQL injection and directory traversal to gain read access over the user folder. But then, things become much more complicated. The player is presented with a Discord bot and a Minecraft server which were set up by unexperienced server admins, allowing the player to attack it. A combination of multiple vulnerabilities to first open a reverse shell, then gain root access over the system is needed to open the secret flag file.
+                </p>
+                <p class="textblock">
+                    Evil Inc. runs as a Docker container and is written in HTML/CSS/JS, Python, and Java. It requires no prior experience in computer security, though programming skills are important.
                 </p>
             </div>
             <div class="project">
                 <img src="assets/deep-duel.png">
-                <h1>⚔️ Deep Duel ⚔️</h1>
+                <h1>⚔ Deep Duel ⚔</h1>
                 <p class="tagline">A 2D multiplayer browser game</p>
                 <p class="links">
                     With <a href="https://github.com/realChesta">Kyrill Hux</a><br>
@@ -229,10 +258,10 @@
             <div class="project">
                 <h1>...and there's always more!</h1>
                 <p class="textblock">
-                    Over the past few years, I've almost always had at least one coding project on my to-do list. While some of them I will gladly show to the world, a vast majority of my projects have either never seen the daylight or just aren't worth an entry here. After all, what kind of programmer finishes every side project they start? :)
+                    Throughout the past few years, I've almost always been working on at least one coding project. While some of them I will gladly show to the world, a vast majority have either never seen the daylight or just aren't big enough to be an entry here. After all, who finishes every side project they start? :)
                 </p>
                 <p class="textblock">
-                    Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most notably java.util.Random), <a href="https://cfour.n2d4.com" style="color: inherit;">a very hacky Connect-Four game</a> written in a few hours, a less polished linear algebra version of multiple-choices, a MIPS assembler & emulator, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and more.
+                    Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most notably java.util.Random), <a href="https://cfour.n2d4.com" style="color: inherit;">a minimalistic Connect-Four game</a> with multiplayer and singleplayer (vs. computer) support, a less polished linear algebra version of multiple-choices, a MIPS assembler & emulator, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and more.
                 </p>
                 <p class="textblock">
                     If you have any questions, drop me a message on <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> :D
@@ -251,6 +280,7 @@
         <label for="sldshw7"></label>
         <label for="sldshw8"></label>
         <label for="sldshw9"></label>
+        <label for="sldshw10"></label>
     </div>
 
     <script>
@@ -290,7 +320,7 @@
     <hr class="noprint">
 
 
-    <a class="noprint" style="float: right; font-size: 80%;" onclick="window.print()" href="javascript:void(0)" target="_self">
+    <a class="noprint titlecol" style="float: right; font-size: 80%;" onclick="window.print()" href="javascript:void(0)" target="_self">
         [print]
     </a>
     
@@ -303,28 +333,28 @@
                 <table>
                     <tr>
                         <td>Name</td>
-                        <td><b>Konstantin "Stan" Wohlwend</b></td>
+                        <td><b class="titlecol">Konstantin "Stan" Wohlwend</b></td>
                     </tr>
                     <tr>
                         <td>E-Mail</td>
                         <td>
-                            <b><a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a></b> <i>(preferred)</i><br>
-                            <b><a href="mailto:wohlwenk@student.ethz.ch">wohlwenk@student.ethz.ch</a></b>
+                            <b class="titlecol"><a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a></b> <i>(preferred)</i><br>
+                            <b class="titlecol"><a href="mailto:wohlwenk@student.ethz.ch">wohlwenk@student.ethz.ch</a></b>
                         </td>
                     </tr>
                     <tr>
                         <td>Languages</td>
-                        <td><b>German</b> (native), <b>English</b> (proficient)</td>
+                        <td><b class="titlecol">German</b> (native), <b class="titlecol">English</b> (proficient)</td>
                     </tr>
                     <tr>
                         <td>Preferred programming languages</td>
                         <td>
-                            <b>Java</b>,
-                            <b>JavaScript</b>,
-                            <b>TypeScript</b>,
-                            <b>Python</b>,
-                            <b>C</b>,
-                            <b>C++</b>
+                            <b class="titlecol">Java</b>,
+                            <b class="titlecol">JavaScript</b>,
+                            <b class="titlecol">TypeScript</b>,
+                            <b class="titlecol">Python</b>,
+                            <b class="titlecol">C</b>,
+                            <b class="titlecol">C++</b>
                             <span class="nowrap"><i>(in no particular order)</i></span>
                         </td>
                     </tr>
@@ -464,6 +494,17 @@
                 </div>
                 <table>
                     <tr>
+                        <td><span class="nowrap">Spring 2020</span> - <span class="nowrap">Spring 2021</span></td>
+                        <td>
+                            <b class="tbtitle">Evil Inc.</b><br>
+                            <div class="textblock">
+                                Cross-category <b>Capture the Flag</b> challenge designed as an introduction into IT security<br>
+                                Player works through layers of common vulnerabilities to gain `root` access to the entire <b>Docker</b> container
+                                <a href="https://github.com/N2D4/evil-inc">https://github.com/N2D4/evil-inc</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
                         <td><span class="nowrap">Winter 2018</span> - today</td>
                         <td>
                             <b class="tbtitle">card-game</b><br>
@@ -547,23 +588,23 @@
                     <tr>
                         <td>Google CodeJam 2019</td>
                         <td>
-                            <b>Rank 1217/35559</b><br>
+                            <b class="titlecol">Rank 1217/35559</b><br>
                         </td>
                     </tr>
                     <tr>
                         <td>Google Hashcode 2018</td>
                         <td>
-                            <b>Rank 81/4856</b><br>
+                            <b class="titlecol">Rank 81/4856</b><br>
                             in a team of four
                         </td>
                     </tr>
                     <tr>
                         <td>Facebook Hacker Cup 2018</td>
-                        <td><b>Rank 400/8216</b></td>
+                        <td><b class="titlecol">Rank 400/8216</b></td>
                     </tr>
                     <tr>
                         <td>Google CodeJam 2018</td>
-                        <td><b>Rank 1566/24584</b></td>
+                        <td><b class="titlecol">Rank 1566/24584</b></td>
                     </tr>
                 </table>
             </div>
@@ -591,7 +632,7 @@
     </div>
 
     <div style="font-size: 80%;" class="noprint">
-        Last updated March 26th, 2021.
+        Last updated April 7th, 2021.
     </div>
 
 
