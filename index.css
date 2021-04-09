@@ -8,7 +8,8 @@
 
     body {
         max-width: 700px;
-        min-width: 600px;
+        min-width: 500px;
+        -webkit-text-size-adjust: none;
     }
 
     html {
@@ -98,11 +99,6 @@ table tr:nth-of-type(5n+4) { --hilite-col: var(--hilite-accent-5); }
 .cvcol > div:nth-of-type(5n+3) { --hilite-col: var(--hilite-accent-4); }
 .cvcol > div:nth-of-type(5n+4) { --hilite-col: var(--hilite-accent-5); }
 
-#stylecontainer {
-    position: absolute;
-    right: 0;
-}
-
 #darkmode::after {
     content: '[dark mode]';
 }
@@ -137,8 +133,6 @@ html {
     font-family: 'Inconsolata', monospace;
     background-color: var(--bg-col);
     color: var(--text-col);
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 @media print {
@@ -152,9 +146,20 @@ html {
 }
 
 body {
-    position: relative;
     height: 100%;
     margin: 0px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.titleline {
+    position: relative;
+}
+
+#stylecontainer {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 a {
@@ -351,9 +356,6 @@ hr.minus {
 
 .nowrap {
     display: inline-block;
-    -webkit-hyphens: none;
-    -ms-hyphens: none;
-    -moz-hyphens: none;
     hyphens: none;
 }
 
@@ -509,7 +511,7 @@ table tr > td {
 table tr > td:first-of-type {
     text-align: right;
     font-weight: bold;
-    width: 180px;
+    width: 25%;
     padding-right: 20px;
 }
 
@@ -519,7 +521,7 @@ table tr > td:first-of-type i {
 
 @media print {
     .cvcol.multi table tr > td:first-of-type {
-        width: 90px;
+        width: 63px;
         font-size: 55%;
         padding-right: 6px;
         color: #CCCCCC;
