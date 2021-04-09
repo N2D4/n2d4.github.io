@@ -8,7 +8,7 @@
 
     body {
         max-width: 700px;
-        min-width: 300px;
+        min-width: 600px;
     }
 
     html {
@@ -44,7 +44,7 @@
     }
 
     html.darkmode {
-        --bg-col: #111111;
+        --bg-col: #050711;
         --text-col: #888888;
         --hilite-col: var(--hilite-accent-4);
         --title-col: #CCCCCC;
@@ -135,6 +135,8 @@ table tr:nth-of-type(5n+4) { --hilite-col: var(--hilite-accent-5); }
 
 html {
     font-family: 'Inconsolata', monospace;
+    font-size: 95%;
+    font-weight: 300;
     background-color: var(--bg-col);
     color: var(--text-col);
     padding-left: 20px;
