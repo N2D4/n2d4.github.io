@@ -130,7 +130,7 @@ table tr:nth-of-type(5n+4) { --hilite-col: var(--hilite-accent-5); }
 }
 
 html {
-    font-family: 'Inconsolata', monospace;
+    font-family: ui-monospace, monospace;
     background-color: var(--bg-col);
     color: var(--text-col);
 }
