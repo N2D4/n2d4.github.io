@@ -121,6 +121,28 @@
                 </p>
             </div>
             <div class="project">
+                <img src="assets/uncharted.png">
+                <h1>📈 uncharted 📈</h1>
+                <p class="tagline">A code-driven data visualization tool</p>
+                <p class="links">
+                    <a href="https://n2d4.github.io/uncharted">Try it online!</a><br>
+                    <a href="https://github.com/N2D4/uncharted">Source on GitHub</a>
+                </p>
+                <p class="textblock">
+                    Hah, usually it's the other way around, coding being data-driven and stuff, isn't it? Anyways, a vast majority of my
+                    plotting needs are "I have a (possibly complex) function and want to see how it looks like with different
+                    parameters". Sure, there are ways to do that (matplotlib, Mathematica, etc.), but I figured I spend most of my time
+                    not on the function but on making the plots look nice. I mean, do I <i>really</i> have to care about step size just
+                    to watch two lines intersect? And I wanna share the plots, too. I'm not gonna teach my friends Octave to show them
+                    how gas emissions affect the climate.
+                </p>
+                <p class="textblock">
+                    Uncharted is an opinionated charting tool with "reasonable" defaults. It takes a TypeScript function and a bunch of
+                    parameter values and plots that. It takes inferred parameter & result types from TypeScript's compiler and presents
+                    a UI to let you tweak the values as you wish. The app is built using SvelteKit and uses a cutting-edge web stack.
+                </p>
+                </div>
+                <div class="project">
                 <img src="assets/multiple-choices.png">
                 <h1>✅ multiple-choices ✅</h1>
                 <p class="tagline">Assisting my students in passing the first year</p>
@@ -270,7 +292,13 @@
                     Throughout the past few years, I've almost always been working on at least one coding project. While some of them I will gladly show to the world, a vast majority have either never seen the daylight or just aren't big enough to be an entry here. After all, who finishes every side project they start? :)
                 </p>
                 <p class="textblock">
-                    Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most notably java.util.Random), <a href="https://cfour.n2d4.com" style="color: inherit;">a minimalistic Connect-Four game</a> with multiplayer and singleplayer (vs. computer) support, a less polished linear algebra version of multiple-choices, a MIPS assembler & emulator, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and more.
+                    Among the more polished things of these are a TV box software written for personal use on my Raspberry Pi, a graphical
+                    IDE for making Minecraft modifications without programming experience, a tool that can be used to crack LCGs (most
+                    notably java.util.Random), <a href="https://cfour.n2d4.com" style="color: inherit;">a minimalistic Connect-Four game</a>
+                    with multiplayer and singleplayer (vs. computer) support, a less polished linear algebra version of multiple-choices, a
+                    MIPS assembler & emulator, <a href="https://n2d4.github.io/kelly" style="color: inherit;">a biased betting
+                        simulator</a>, a Discord bot using Markov chains to learn from my conversations, countless game prototypes, and
+                    more.
                 </p>
                 <p class="textblock">
                     If you have any questions, drop me a message on <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> :D
@@ -290,6 +318,7 @@
         <label for="sldshw8"></label>
         <label for="sldshw9"></label>
         <label for="sldshw10"></label>
+        <label for="sldshw11"></label>
     </div>
 
     <script>
@@ -407,12 +436,12 @@
                 </div>
                 <table>
                     <tr>
-                        <td><span class="nowrap"><span class="nowrap">Jun<span class="noprint">e</span></span> - <span
-                                    class="nowrap">Sep<span class="noprint">tember</span> 2021</span></span></td>
+                        <td><span class="nowrap"><span class="nowrap">Jun<span class="noprint">e</span></span> - <span class="nowrap">Sep<span class="noprint">tember</span> 2021</span></span></td>
                         <td>
                             <b class="tbtitle">Software Eng. Intern, Jane Street London</b><br>
                             <div class="textblock">
-                                TBD
+                                Designed & implemented a new version of a crucial service in <b>OCaml</b> by modeling it as a <b>state machine</b><br>
+                                Using <b>profiling</b>, discovered bottlenecks in a central data engine improving benchmarks by <b>30%</b>, furthermore implemented <b>sharding</b> to support horizontal scaling<br>
                             </div>
                         </td>
                     </tr>
@@ -512,6 +541,19 @@
                 </div>
                 <table>
                     <tr>
+                        <td><span class="nowrap">Winter 2021</span></td>
+                        <td>
+                            <b class="tbtitle">Uncharted</b><br>
+                            <div class="textblock">
+                                Code-driven <b>data visualization tool</b> helping users plot charts quickly<br>
+                                Built as a web app in <b>SvelteKit</b>, utilizing the <b>TypeScript compiler API</b> to infer parameter
+                                types<br>
+                                <a href="https://n2d4.github.io/uncharted">https://n2d4.github.io/uncharted</a>
+                                <a href="https://github.com/N2D4/uncharted">https://github.com/N2D4/uncharted</a>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
                         <td><span class="nowrap">Spring 2020</span> - <span class="nowrap">Spring 2021</span></td>
                         <td>
                             <b class="tbtitle">Evil Inc.</b><br>
