@@ -138,7 +138,7 @@ html {
 @media print {
     html {
         font-family: 'Open Sans', sans-serif;
-        font-size: 65%;
+        font-size: 63;
         background-color: #FFFFFF;
         color: #000000;
         margin-top: 16px;
@@ -316,11 +316,11 @@ hr.minus {
     }
 
     .cv > .cvcol.multi {
-        width: 47%;
+        width: 47.5%;
     }
 
     .cv > .cvcol.single {
-        width: 51%;
+        width: 51.5%
     }
 }
 
