@@ -316,11 +316,11 @@ hr.minus {
     }
 
     .cv > .cvcol.multi {
-        width: 50%;
+        width: 47%;
     }
 
     .cv > .cvcol.single {
-        width: 48%;
+        width: 51%;
     }
 }
 
@@ -521,7 +521,7 @@ table tr > td:first-of-type i {
 
 @media print {
     .cvcol.multi table tr > td:first-of-type {
-        width: 55px;
+        width: 48px;
         font-size: 55%;
         padding-right: 6px;
         color: #CCCCCC;
