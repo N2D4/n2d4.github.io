@@ -138,7 +138,7 @@ html {
 @media print {
     html {
         font-family: 'Open Sans', sans-serif;
-        font-size: 63;
+        font-size: 63%;
         background-color: #FFFFFF;
         color: #000000;
         margin-top: 16px;
@@ -493,7 +493,7 @@ table {
 
 @media print {
     table {
-        border-spacing: 6px 8px;
+        border-spacing: 6px 4px;
     }
 }
 
