@@ -75,6 +75,16 @@
         --hilite-accent-4: orange;
         --hilite-accent-5: magenta;
     }
+
+    ul {
+        padding-left: 16px;
+    }
+
+    blockquote {
+        border-left: 2px solid var(--border-col);
+        font-style: italic;
+        padding-left: 16px;
+    }
 }
 
 * {
@@ -337,6 +347,17 @@ hr.minus {
     }
 }
 
+@media not print {
+    .textblock p {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding: 0px;
+        margin-bottom: 0px;
+        padding-left: 8px;
+        border-left: 1px solid var(--border-col);
+    }
+}
+
 .textblock a {
     -webkit-hyphens: none;
     -ms-hyphens: none;
@@ -376,7 +397,7 @@ hr.minus {
 
 .slideshow-container {
     position: relative;
-    height: 350px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     margin-bottom: 0px;
@@ -494,6 +515,12 @@ table {
 @media print {
     table {
         border-spacing: 6px 4px;
+    }
+}
+
+@media not print {
+    table td, table th {
+        padding: 4px;
     }
 }
 
