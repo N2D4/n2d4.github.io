@@ -345,15 +345,18 @@ hr.minus {
     .textblock {
         text-align: justify;
     }
+
+    .textblock p {
+        margin-top: 2px;
+        margin-bottom: 0px;
+    }
 }
 
 @media not print {
     .textblock p {
         margin-top: 8px;
-        margin-bottom: 8px;
-        padding: 0px;
         margin-bottom: 0px;
-        padding-left: 8px;
+        padding: 0 0 0 8px;
         border-left: 1px solid var(--border-col);
     }
 }
