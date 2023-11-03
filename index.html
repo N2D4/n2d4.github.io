@@ -548,7 +548,7 @@
 
     <script>
         'use strict';
-        const enableTransitions = false;
+        const enableTransitions = true;
         let lastSelected = 1;
         let interval;
 
@@ -574,7 +574,7 @@
                 }
 
                 slplus(1, true);
-            }, 12000);
+            }, 7000);
             document.querySelectorAll('.slideshow-controls > label').forEach(a => a.addEventListener('click', () => {
                 clearInterval(interval);
                 lastSelected = [...a.parentNode.children].indexOf(a) + 1;
