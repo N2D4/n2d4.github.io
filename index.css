@@ -109,7 +109,7 @@ table tr:nth-of-type(5n+4) { --hilite-col: var(--hilite-accent-5); }
 .cvcol > div:nth-of-type(5n+3) { --hilite-col: var(--hilite-accent-4); }
 .cvcol > div:nth-of-type(5n+4) { --hilite-col: var(--hilite-accent-5); }
 
-h1 { --hilite-col: var(--hilite-accent-4); }
+.titleline { --hilite-col: var(--hilite-accent-3); }
 
 #darkmode::after {
     content: '[dark mode]';
