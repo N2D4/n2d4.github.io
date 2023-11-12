@@ -54,13 +54,13 @@
         </div>
     </div>
 
-    <div class="noprint" style="margin-bottom: 30px;">
+    <div class="noprint">
         <span class="nowrap">Konstantin "Stan" Wohlwend,</span>
         <span class="nowrap"><span class="age">24</span>yo,</span>
         <span class="nowrap">life is great.</span>
     </div>
 
-    <div class="noprint" style="margin-bottom: 30px;">
+    <div class="noprint">
         Previously <b>Google</b>, <b>Jane Street</b>, <b>Y Combinator</b> (W23).
     </div>
 
@@ -73,18 +73,22 @@
         Konstantin <span style="font-weight: bold;">"Stan"</span> Wohlwend
     </h1>
 
-    <div class="print" style="font-size: 80%; text-align: center;">
+    <p class="print" style="font-size: 80%; text-align: center;">
         <span class="age">22</span> years old,
         speaking German (native) and English (fluent).
         Based in Zurich, happy to travel!<br>
         Proficient in <b>Java</b>, <b>JavaScript</b>, <b>TypeScript</b> and <b>Python</b>, decent in <b>C</b>,
         <b>C++</b>,
         <b>Rust</b> and <b>Go</b>
-    </div>
+    </p>
 
-    <div class="print" style="font-size: 80%; text-align: center;">
+    <p class="print" style="font-size: 80%; text-align: center;">
+        Previously <b>Google</b>, <b>Jane Street</b>, <b>Y Combinator</b> (W23).
+    </p>
+
+    <p class="print" style="font-size: 80%; text-align: center;">
         Check out my portfolio! <a href="http://n2d4.github.io">n2d4.github.io</a>
-    </div>
+    </p>
 
     <!-- Kind of ugly, but the fact that it's a pure CSS slideshow makes up for it doesn't it :) -->
     <input type="radio" name="slideshow-cntrl-buttons" class="noprint slideshow-cntrl-button" id="sldshw1"
@@ -111,421 +115,467 @@
     <!-- to add new slides, add a new <div class="project"> in the slideshow and a label to .slideshow-controls -->
     <!-- if you want more than 20 radio buttons, adding a radio here is not enough, you'll also need to add CSS definitions -->
 
-    <div class="noprint slideshow">
-        <div class="slideshow-container">
-            <div class="project">
-                <img src="assets/eternal-sunset.jpg">
-                <h1>⛰️ Eternal Sunset ⛰️</h1>
-                <p class="tagline">Basically Cube World but roguelike and (kinda) not dead</p>
-                <p class="links">
-                    With
-                    <a href="https://github.com/rikidere">Patrick Eppensteiner</a>,
-                    <a href="https://github.com/janniku9">Jannik Gartmann</a>,
-                    <a href="https://github.com/Rasilu">Rasmus Lüscher</a>,
-                    <a href="https://github.com/bazumo">Moritz Schneider</a>,
-                    <a href="https://github.com/skaan">Kaan Sentürk</a><br>
-                    <a href="https://www.youtube.com/watch?v=JP2pmngg5tY">Watch the trailer</a>
-                </p>
-                <blockquote style="margin-top: 32px; margin-bottom: 32px;">
-                    <p class="textblock">
-                        For many eternities<br>
-                        the sun rose as it set,<br>
-                        Until some day much later<br>
-                        Apopis put it to rest.<br>
+    <div class="noprint slideshow-outer">
+        <div class="slideshow-nav slideshow-left">
+            <div class="el"></div>
+            <div class="el"></div>
+        </div>
+        <div class="slideshow-nav slideshow-right">
+            <div class="el"></div>
+            <div class="el"></div>
+        </div>
+        <div class="slideshow">
+            <div class="slideshow-container">
+                <div class="project">
+                    <img src="assets/generai.jpeg">
+                    <h1>🖼️ Generai 🖼️</h1>
+                    <p class="tagline">AI image generation before it was cool</p>
+                    <p class="links">
+                        With
+                        <a href="https://github.com/realChesta">Kyrill Hux</a>,
+                        <a href="https://github.com/municola">Nicolas Muntwyler</a>,
+                        <a href="https://github.com/shnippi">Jan Schnyder</a><br>
+                        <a href="https://generai.art">Try it out!</a><br>
+                        <a href="https://generai.art/gallery">Visit the gallery</a>
                     </p>
-                    
                     <p class="textblock">
-                        Awakened by Ra<br>
-                        There is only one chance<br>
-                        To travel through time<br>
-                        And return to old strength.<br>
+                        In early 2022, Jan shared with me some AI image generation models he had found. It took me by storm; I was already impressed by the results of DALL-E at the time, but those models seemed a step up. As reasonable people do, we decided to try and make them even better.
                     </p>
+                    <p class="textblock">
+                        At the time, there was no Stable Diffusion, and only one version of DALL-E. We gave it a shot, and went ahead to train & build a pipeline consisting of multiple models. We're pretty proud to say that we built a product rivaling Midjourney, at the time the closed-source-SOTA in image generation. We were also the only provider that could create 4K+ images.
+                    </p>
+                    <img src="assets/generai-blades.jpeg" class="right">
+                    <p class="textblock">
+                        And we built a platform around it. Turns out what we had can be sold! We got in touch with Stability AI and got pre-beta access for what would later become Stable Diffusion, were featured at the Zurich PopCon 2022, and got the chance to take the project to Y Combinator's W23 batch, starting what would later become <a href="https://nunu.ai" target="_blank">nunu.ai</a>. We never managed to make Generai pay our rent because we weren't particularly keen on the marketing part, and after a few months Stable Diffusion created a lot of strong competition in the space, but it was fun to try.
+                    </p>
+                    <p class="textblock">
+                        <i>Prompt engineering</i> was what people called the (at the time) fairly hard task of translating human thoughts into a prompt the machine does well on. Alongside parameter tuning, this was a significant blocker to getting good results. By analyzing over 3000 prompts submitted by our users, we built a collection of tricks into our UI to get the prompts a professional prompt engineer would've made.
+                    </p>
+                    <img src="assets/generai-how-it-works.png">
+                    <p class="textblock">
+                        Sadly, we were broke students, and didn't get to buy our own A100 GPU clusters. So we had to stick to 3090s that we rented off of Ethereum miners (a bubble that coincidentally just popped). It was painful! Turns out that crypto miners are not generally good server admins (we were seeing a server failure more than once a day on average), but it taught us how to build a resilient system that can handle a lot of crashing. This way, we reduced our hardware costs from ~$2-8 per image on the big cloud providers to about 10c.
+                    </p>
+                    <p class="textblock">
+                        The platform was built on Firebase, with Next.js, in TypeScript and a Python backend. We used Google Cloud & Vercel for deployments, Shopify for our print store, and Stripe for payments.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/eternal-sunset.jpg">
+                    <h1>⛰️ Eternal Sunset ⛰️</h1>
+                    <p class="tagline">Basically Cube World but roguelike and (kinda) not dead</p>
+                    <p class="links">
+                        With
+                        <a href="https://github.com/rikidere">Patrick Eppensteiner</a>,
+                        <a href="https://github.com/janniku9">Jannik Gartmann</a>,
+                        <a href="https://github.com/Rasilu">Rasmus Lüscher</a>,
+                        <a href="https://github.com/bazumo">Moritz Schneider</a>,
+                        <a href="https://github.com/skaan">Kaan Sentürk</a><br>
+                        <a href="https://www.youtube.com/watch?v=JP2pmngg5tY">Watch the trailer</a>
+                    </p>
+                    <blockquote style="margin-top: 32px; margin-bottom: 32px;">
+                        <p class="textblock">
+                            For many eternities<br>
+                            the sun rose as it set,<br>
+                            Until some day much later<br>
+                            Apopis put it to rest.<br>
+                        </p>
+                        
+                        <p class="textblock">
+                            Awakened by Ra<br>
+                            There is only one chance<br>
+                            To travel through time<br>
+                            And return to old strength.<br>
+                        </p>
 
+                        <p class="textblock">
+                            Follow the cats<br>
+                            To dig up Khafre's throne<br>
+                            And turn into blood<br>
+                            What turns you into stone.<br>
+                        </p>
+                    </blockquote>
                     <p class="textblock">
-                        Follow the cats<br>
-                        To dig up Khafre's throne<br>
-                        And turn into blood<br>
-                        What turns you into stone.<br>
+                        We made this for the Game Programming Lab course at ETH, but we basically ended up making this a 200% full-time job. Eternal Sunset is a two-player co-op roguelike voxel adventure game. It's procedurally generated and features a progression system on infinite terrain.
                     </p>
-                </blockquote>
-                <p class="textblock">
-                    We made this for the Game Programming Lab course at ETH, but we basically ended up making this a 200% full-time job. Eternal Sunset is a two-player co-op roguelike voxel adventure game. It's procedurally generated and features a progression system on infinite terrain.
-                </p>
-                <p class="textblock">
-                    At the core is the time mechanic. When the hourglass runs out of sand, the player will travel back in time right back to their spawn, but the world that they know will remain the same. As they explore more and more, they have to find a route to kill the final boss within the time limit. If they succeed, their run and the time they needed will be registered in the weekly leaderboard; at the beginning of the next week, a whole new world will be procedurally generated, meaning there is always fresh competition.
-                </p>
-                <p class="textblock">
-                    By the time the course ended, we had four different biomes with unique generation, seven dungeon types (each of which can create many variations using procedural generation), 9 unique enemies & NPCs (25 total variants), 71 items with unique behaviour, 13 of which being weapons split up into 4 classes with 3 attacks each, and over 1000 commits on our Git repo.
-                </p>
-                <p class="textblock">
-                    The game is written in C#, but not using Unity, instead we built our own engine on MonoGame (that's right; everything from voxel rendering to 3D physics is custom-made, though MonoGame does provide us with some low-level rendering primitives). The world is divided into small chunks which are generated and loaded individually. This happens separately from the main thread, so it won't freeze the game; in fact, it can leverage as many CPU cores as available, resulting in a satisfying experience even when exploring a large world. This, plus the fact that we use advanced rendering techniques, allows us to render millions and millions of blocks with ease, far more than even established voxel games like Minecraft (which was developed with single-core systems in mind).
-                </p>
-                <p class="textblock">
-                    Animations in a block world are considerably different from what we know from real life. We built our own animation framework to facilitate this; it allows us to express complex transitions with just a few lines of code. We interpolate animations independently from game ticks, something that is required because time is our central mechanic and there are items which allow players to mess with tick duration & behaviour. This meant we had to scrap a large part of the MonoGame update loop, but the results are incredibly smooth 120FPS+ movements.
-                </p>
-                <p class="textblock">
-                    I could go on, but there's only so much space on this website. If you're interested, please don't be shy and reach out. And if you'd like to play the game, we do want to put it on Steam eventually :)
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/card-game.png">
-                <h1>🃏 card-game 🃏</h1>
-                <p class="tagline">Playing card games in your web browser</p>
-                <p class="links">
-                    With <a href="https://github.com/janniku9">Jannik Gartmann</a><br>
-                    <a href="https://jass.n2d4.com">Play it online!</a><br>
-                    <a href="https://github.com/N2D4/card-game">Source on GitHub</a>
-                </p>
-                <p class="textblock">
-                    <i>Jass</i> is a card game in the Bézique family, originally played in the Netherlands but since
-                    then it has quickly gained popularity throughout the entirety
-                    of Switzerland. Today, Jass is considered Switzerland's national card game, so understandably demand
-                    for a digital version is huge. However, unfortunately we
-                    were very unsatisfied with the choices we had as many online-Jass portals run on Adobe Flash, while
-                    others are hidden behind a paywall or tons of ads, so we
-                    figured it would be our best bet to start work on our own engine. This way, we can also implement
-                    variants of the game that are popular in only small parts of
-                    Switzerland that many other apps don't support.
-                </p>
-                <p class="textblock">
-                    card-game is written in TypeScript and uses a modern, ES6-based coding style. One of our design
-                    goals was to make it easily adaptable to new game modes, meaning
-                    with just a few lines of code you can implement entirely new variants of Jass. In fact, because
-                    everything is modular, it could be easily transformed into an
-                    engine for any other card game.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/multiple-choices.png">
-                <h1>✅ multiple-choices ✅</h1>
-                <p class="tagline">Assisting my students in passing the first year</p>
-                <p class="links">
-                    <a href="https://n.ethz.ch/~wohlwenk/kapitel6">Try it online!</a><br>
-                    <a href="https://github.com/N2D4/multiple-choices">Source on GitHub</a>
-                </p>
-                <p class="textblock">
-                    Discrete Mathematics is often considered one of the most challenging subjects in the first year of
-                    the Computer Science
-                    Bachelor at ETH Zurich. I had the chance to be a teaching assistant during the autumn semester of
-                    2018, leading a group
-                    of 25 Discrete Maths students through their first semester. multiple-choices is a tool that uses
-                    gamification and a
-                    simple and intuitive interface to motivate students to test their knowledge using multiple choice
-                    exercises. It turned
-                    out the tool spread a tad bit, so people outside my exercise class got the chance to use it, too! :D
-                </p>
-                <p class="textblock">
-                    multiple-choices is a frontend vanilla HTML/CSS/JS web app. It runs entirely in the user's browser
-                    and its only external
-                    dependency is KaTeX, a JavaScript LaTeX renderer.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/mips-sim.png">
-                <h1>🖥 mips-sim 🖥</h1>
-                <p class="tagline">A MIPS assembler and emulator</p>
-                <p class="links">
-                    With <a href="https://github.com/bazumo">Moritz Schneider</a><br>
-                    <a href="https://bazumo.github.io/mips-sim">Try it online!</a><br>
-                    <a href="https://github.com/bazumo/mips-sim">Source on GitHub</a>
-                </p>
-                <p class="textblock">
-                    I don't think MIPS needs an introduction — 40 years old and some people still use it in production!
-                    (For better or worse.) It's interesting because it survived the test of time, and also because it's
-                    one of the (if not the one) most idiomatic reduced ISAs out there.
-                </p>
-                <p class="textblock">
-                    Containing only a small set of instructions, MIPS is much simpler to implement than CISCs like x86.
-                    So, Moritz and I decided to work on a MIPS editor, assembler and emulator for the browser. We spent
-                    a lot of time planning the software infrastructure so implementing our interface for a different
-                    architecture would be no harder than translating the specification document to source code. This
-                    resulted in a modular design where adding, removing and modifying opcodes is trivial.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/bobby-trawler.png">
-                <h1>♟ bobby-trawler ♟</h1>
-                <p class="tagline">A somewhat stupid chess computer</p>
-                <p class="links">
-                    <a href="https://chess.n2d4.com">Fight me online!</a><br>
-                    <a href="https://github.com/N2D4/bobby-trawler">Source on GitHub</a>
-                </p>
-                <p class="textblock">
-                    In 1996, Deep Blue was the first chess computer to defeat the then world champion, Garry Kasparov.
-                    In 2019, Bobby Trawler was the first chess computer to defeat
-                    me, Stan Wohlwend. Granted, that is not quite true given I've already lost to a good bunch of chess
-                    computers before that and it also doesn't say much given I'm
-                    a terrible chess player, but it makes for a good introductory line.
-                </p>
-                <p class="textblock">
-                    Bobby Trawler consists of two engines, namely Tanner and Daedrian. Tanner is a brute-force engine
-                    that simply runs a search on all possible chess moves, using
-                    various techniques such as memoization to speed up the process. Daedrian uses a min-max algorithm,
-                    allowing it to have more elaborate game plans, but that also
-                    means it is less consistent. Because my chess knowledge is limited, the board valuation method is
-                    very basic, and also neither of the two engines use an opening
-                    book, making Bobby Trawler very vulnerable in the early game. However, if you can not get a decent
-                    lead against the computer early on, it becomes hard to defeat
-                    in the later stages of the game.
-                </p>
-                <p class="textblock">
-                    I've made a lot of optimizations on the assembly level to improve performance. By using benchmarking
-                    tools and analyzing compiler output, I found out which
-                    parts of the program can be improved by inlining critical functions and making the program less
-                    vulnerable to low-level issues like cache misses.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/evil-inc.png">
-                <h1>🚩 Evil Inc. 🚩</h1>
-                <p class="tagline">A somewhat sophisticated beginner CTF</p>
-                <p class="links">
-                    <a href="https://github.com/N2D4/evil-inc">Source on GitHub</a><br>
-                </p>
-                <p class="textblock">
-                    <b>SPOILER WARNING!</b> If you're planning on trying this challenge yourself, stop reading right
-                    now.
-                </p>
-                <p class="textblock">
-                    Oh no! Evil Inc., a secretive organisation with the sole goal of total annihilation is about to
-                    destroy the universe and no one can stop them! No one? No, not
-                    quite! There is still hope, as there is a smart hacker on their mission to break into Evil Inc.'s
-                    systems and save the world! (That smart hacker is you.)
-                </p>
-                <p class="textblock">
-                    Yea, that's cheesy. But I need to hype it up somehow. Computer security is all about breaking into
-                    things, and in Evil Inc. your goal is to break into a server
-                    and steal a secret flag given just their website.
-                </p>
-                <p class="textblock">
-                    The player starts by doing simple attacks like SQL injection and directory traversal to gain read
-                    access over the user folder. But then, things become much more
-                    complicated. The player is presented with a Discord bot and a Minecraft server which were set up by
-                    unexperienced server admins, allowing the player to attack
-                    it. A combination of multiple vulnerabilities to first open a reverse shell, then gain root access
-                    over the system is needed to open the secret flag file.
-                </p>
-                <p class="textblock">
-                    Evil Inc. runs as a Docker container and is written in HTML/CSS/JS, Python, and Java. It requires no
-                    prior experience in computer security, though programming
-                    skills are important.
+                    <img src="assets/eternal-sunset-view.png" class="right">
+                    <p class="textblock">
+                        At the core is the time mechanic. When the hourglass runs out of sand, the player will travel back in time right back to their spawn, but the world that they know will remain the same. As they explore more and more, they have to find a route to kill the final boss within the time limit. If they succeed, their run and the time they needed will be registered in the weekly leaderboard; at the beginning of the next week, a whole new world will be procedurally generated, meaning there is always fresh competition.
                     </p>
-                    </div>
-                    <div class="project">
-                        <img src="assets/uncharted.png">
-                        <h1>📈 uncharted 📈</h1>
-                        <p class="tagline">A code-driven data visualization tool</p>
-                        <p class="links">
-                            <a href="https://n2d4.github.io/uncharted">Try it online!</a><br>
-                            <a href="https://github.com/N2D4/uncharted">Source on GitHub</a>
+                    <p class="textblock">
+                        By the time the course ended, we had four different biomes with unique generation, seven dungeon types (each of which can create many variations using procedural generation), 9 unique enemies & NPCs (25 total variants), 71 items with unique behaviour, 13 of which being weapons split up into 4 classes with 3 attacks each, and over 1000 commits on our Git repo.
+                    </p>
+                    <img src="assets/eternal-sunset-temple.png">
+                    <p class="textblock">
+                        The game is written in C#, but not using Unity, instead we built our own engine on MonoGame (everything from voxel rendering to 3D physics is custom-made, though MonoGame provides us with some low-level rendering primitives). The world is divided into small chunks which are generated and loaded individually. This happens separately from the main thread, so it won't freeze the game; in fact, it can leverage as many CPU cores as available, resulting in a satisfying experience even when exploring a large world. This, plus the fact that we use advanced rendering techniques, allows us to render millions and millions of blocks with ease, far more than even established voxel games like Minecraft (which was developed with single-core systems in mind).
+                    </p>
+                    <p class="textblock">
+                        Animations in a block world are considerably different from what we know from real life. We built our own animation framework to facilitate this; it allows us to express complex transitions with just a few lines of code. We interpolate animations independently from game ticks, something that is required because time is our central mechanic and there are items which allow players to mess with tick duration & behaviour. This meant we had to scrap a large part of the MonoGame update loop, but the results are incredibly smooth 120FPS+ movements.
+                    </p>
+                    <p class="textblock">
+                        I could go on, but there's only so much space on this website. If you're interested, please don't be shy and reach out. And if you'd like to play the game, we do want to put it on Steam eventually :)
+                    </p>
+                    <iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/JP2pmngg5tY?si=YPMKu6LDiYCbjrit" title="Eternal Sunset Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="project">
+                    <img src="assets/card-game.png">
+                    <h1>🃏 card-game 🃏</h1>
+                    <p class="tagline">Playing card games in your web browser</p>
+                    <p class="links">
+                        With <a href="https://github.com/janniku9">Jannik Gartmann</a><br>
+                        <a href="https://jass.n2d4.com">Play it online!</a><br>
+                        <a href="https://github.com/N2D4/card-game">Source on GitHub</a>
+                    </p>
+                    <p class="textblock">
+                        <i>Jass</i> is a card game in the Bézique family, originally played in the Netherlands but since
+                        then it has quickly gained popularity throughout the entirety
+                        of Switzerland. Today, Jass is considered Switzerland's national card game, so understandably demand
+                        for a digital version is huge. However, unfortunately we
+                        were very unsatisfied with the choices we had as many online-Jass portals run on Adobe Flash, while
+                        others are hidden behind a paywall or tons of ads, so we
+                        figured it would be our best bet to start work on our own engine. This way, we can also implement
+                        variants of the game that are popular in only small parts of
+                        Switzerland that many other apps don't support.
+                    </p>
+                    <p class="textblock">
+                        card-game is written in TypeScript and uses a modern, ES6-based coding style. One of our design
+                        goals was to make it easily adaptable to new game modes, meaning
+                        with just a few lines of code you can implement entirely new variants of Jass. In fact, because
+                        everything is modular, it could be easily transformed into an
+                        engine for any other card game.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/multiple-choices.png">
+                    <h1>✅ multiple-choices ✅</h1>
+                    <p class="tagline">Assisting my students in passing the first year</p>
+                    <p class="links">
+                        <a href="https://n.ethz.ch/~wohlwenk/kapitel6">Try it online!</a><br>
+                        <a href="https://github.com/N2D4/multiple-choices">Source on GitHub</a>
+                    </p>
+                    <p class="textblock">
+                        Discrete Mathematics is often considered one of the most challenging subjects in the first year of
+                        the Computer Science
+                        Bachelor at ETH Zurich. I had the chance to be a teaching assistant during the autumn semester of
+                        2018, leading a group
+                        of 25 Discrete Maths students through their first semester. multiple-choices is a tool that uses
+                        gamification and a
+                        simple and intuitive interface to motivate students to test their knowledge using multiple choice
+                        exercises. It turned
+                        out the tool spread a tad bit, so people outside my exercise class got the chance to use it, too! :D
+                    </p>
+                    <p class="textblock">
+                        multiple-choices is a frontend vanilla HTML/CSS/JS web app. It runs entirely in the user's browser
+                        and its only external
+                        dependency is KaTeX, a JavaScript LaTeX renderer.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/mips-sim.png">
+                    <h1>🖥 mips-sim 🖥</h1>
+                    <p class="tagline">A MIPS assembler and emulator</p>
+                    <p class="links">
+                        With <a href="https://github.com/bazumo">Moritz Schneider</a><br>
+                        <a href="https://bazumo.github.io/mips-sim">Try it online!</a><br>
+                        <a href="https://github.com/bazumo/mips-sim">Source on GitHub</a>
+                    </p>
+                    <p class="textblock">
+                        I don't think MIPS needs an introduction — 40 years old and some people still use it in production!
+                        (For better or worse.) It's interesting because it survived the test of time, and also because it's
+                        one of the (if not the one) most idiomatic reduced ISAs out there.
+                    </p>
+                    <p class="textblock">
+                        Containing only a small set of instructions, MIPS is much simpler to implement than CISCs like x86.
+                        So, Moritz and I decided to work on a MIPS editor, assembler and emulator for the browser. We spent
+                        a lot of time planning the software infrastructure so implementing our interface for a different
+                        architecture would be no harder than translating the specification document to source code. This
+                        resulted in a modular design where adding, removing and modifying opcodes is trivial.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/bobby-trawler.png">
+                    <h1>♟ bobby-trawler ♟</h1>
+                    <p class="tagline">A somewhat stupid chess computer</p>
+                    <p class="links">
+                        <a href="https://chess.n2d4.com">Fight me online!</a><br>
+                        <a href="https://github.com/N2D4/bobby-trawler">Source on GitHub</a>
+                    </p>
+                    <p class="textblock">
+                        In 1996, Deep Blue was the first chess computer to defeat the then world champion, Garry Kasparov.
+                        In 2019, Bobby Trawler was the first chess computer to defeat
+                        me, Stan Wohlwend. Granted, that is not quite true given I've already lost to a good bunch of chess
+                        computers before that and it also doesn't say much given I'm
+                        a terrible chess player, but it makes for a good introductory line.
+                    </p>
+                    <p class="textblock">
+                        Bobby Trawler consists of two engines, namely Tanner and Daedrian. Tanner is a brute-force engine
+                        that simply runs a search on all possible chess moves, using
+                        various techniques such as memoization to speed up the process. Daedrian uses a min-max algorithm,
+                        allowing it to have more elaborate game plans, but that also
+                        means it is less consistent. Because my chess knowledge is limited, the board valuation method is
+                        very basic, and also neither of the two engines use an opening
+                        book, making Bobby Trawler very vulnerable in the early game. However, if you can not get a decent
+                        lead against the computer early on, it becomes hard to defeat
+                        in the later stages of the game.
+                    </p>
+                    <p class="textblock">
+                        I've made a lot of optimizations on the assembly level to improve performance. By using benchmarking
+                        tools and analyzing compiler output, I found out which
+                        parts of the program can be improved by inlining critical functions and making the program less
+                        vulnerable to low-level issues like cache misses.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/evil-inc.png">
+                    <h1>🚩 Evil Inc. 🚩</h1>
+                    <p class="tagline">A somewhat sophisticated beginner CTF</p>
+                    <p class="links">
+                        <a href="https://github.com/N2D4/evil-inc">Source on GitHub</a><br>
+                    </p>
+                    <p class="textblock">
+                        <b>SPOILER WARNING!</b> If you're planning on trying this challenge yourself, stop reading right
+                        now.
+                    </p>
+                    <p class="textblock">
+                        Oh no! Evil Inc., a secretive organisation with the sole goal of total annihilation is about to
+                        destroy the universe and no one can stop them! No one? No, not
+                        quite! There is still hope, as there is a smart hacker on their mission to break into Evil Inc.'s
+                        systems and save the world! (That smart hacker is you.)
+                    </p>
+                    <p class="textblock">
+                        Yea, that's cheesy. But I need to hype it up somehow. Computer security is all about breaking into
+                        things, and in Evil Inc. your goal is to break into a server
+                        and steal a secret flag given just their website.
+                    </p>
+                    <p class="textblock">
+                        The player starts by doing simple attacks like SQL injection and directory traversal to gain read
+                        access over the user folder. But then, things become much more
+                        complicated. The player is presented with a Discord bot and a Minecraft server which were set up by
+                        unexperienced server admins, allowing the player to attack
+                        it. A combination of multiple vulnerabilities to first open a reverse shell, then gain root access
+                        over the system is needed to open the secret flag file.
+                    </p>
+                    <p class="textblock">
+                        Evil Inc. runs as a Docker container and is written in HTML/CSS/JS, Python, and Java. It requires no
+                        prior experience in computer security, though programming
+                        skills are important.
                         </p>
-                        <p class="textblock">
-                            Hah, usually it's the other way around, coding being data-driven and stuff, isn't it? Anyways, a
-                            vast majority of my
-                            plotting needs are "I have a (possibly complex) function and want to see how it looks like with
-                            different
-                            parameters". Sure, there are ways to do that (matplotlib, Mathematica, etc.), but I figured I spend
-                            most of my time
-                            not on the function but on making the plots look nice. I mean, do I <i>really</i> have to care about
-                            step size just
-                            to watch two lines intersect? And I wanna share the plots, too. I'm not gonna teach my friends
-                            Octave to show them
-                            how gas emissions affect the climate.
-                        </p>
-                        <p class="textblock">
-                            Uncharted is an opinionated charting tool with "reasonable" defaults. It takes a TypeScript function
-                            and a bunch of
-                            parameter values and does exactly one thing, plot that. Utilizing inferred parameter & result types
-                            from
-                            TypeScript's compiler, it presents
-                            a UI to let you tweak the values as you wish. The app is built with SvelteKit and uses a
-                            cutting-edge web stack.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/deep-duel.png">
-                <h1>⚔ Deep Duel ⚔</h1>
-                <p class="tagline">A 2D multiplayer browser game</p>
-                <p class="links">
-                    With <a href="https://github.com/realChesta">Kyrill Hux</a><br>
-                    <a href="https://github.com/realChesta/deep-duel">Source on GitHub</a><br>
-                </p>
-                <p class="textblock">
-                    While we initially started Deep Duel with the goal of making an AI learn to play a simple fighting
-                    game, we never ended up doing that and instead just
-                    emphasized on the fighting game part. Deep Duel is a fast-paced multiplayer duel game where you try
-                    to out-maneuver your opponent by hitting, dashing and
-                    shooting them on a two-dimensional plane.
-                </p>
-                <p class="textblock">
-                    Deep Duel is written in HTML, CSS, and JavaScript, using React for the UX elements, PixiJS for
-                    rendering and lance.gg as a multiplayer engine.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/contest-library.png">
-                <h1>📚 Contest Library 📚</h1>
-                <p class="tagline">Reusing algorithms at a low performance cost</p>
-                <p class="links">
-                    <a href="https://github.com/N2D4/contest-library">Source on GitHub</a>
-                </p>
-                <p class="textblock">
-                    When participating in competitive programming contests, you often end up using the same algorithms
-                    over and over again. For this purpose, I've started putting
-                    them into a library where I can re-use them whenever. Being competitive by heart, this library now
-                    contains thousands of lines of code and many algorithms and
-                    data structures, such as sparse matrices, segment trees, range lists, primitive collections,
-                    multimaps, graphs, coloring, cycle detection, flow algorithms, tree
-                    traversal, prime factorization, modular arithmetic, string utilities, histograms, fast I/O, genetic
-                    optimization, and many more. Note that I can't just use
-                    third-party libraries as these are forbidden in most contests.
-                </p>
-                <p class="textblock">
-                    The number one goal is to learn more about the algorithms I'm implementing, which is why I'm always
-                    trying to find common ancestors of algorithms and data
-                    structures. For example, an adjacency list graph is equivalent to an adjacency matrix graph using a
-                    row-list sparse matrix, and Prim's algorithm is really just
-                    a special case of A* with a certain heuristics function. This kind of code re-use means that any
-                    performance improvement or heuristic I implement on the A*
-                    algorithm will subsequently also speed up Prim's.
-                </p>
-                <p class="textblock">
-                    It turns out that most competitive programmers use C++, and the exercises sometimes even expect you
-                    to. Java usually is slower, and the fact that I'm using an
-                    abstraction above everything does not help. Even though you'd expect constants to not matter in
-                    these contests, it turns out they do, and especially in Java
-                    where boxing and unboxing primitives is the default when working with generic types cache misses
-                    will generally do a huge difference. The library uses several
-                    tricks (eg. primitive collections) and heuristics (eg. using a linear search list instead of a hash
-                    map for small maps) to combat this.
-                </p>
-                <p class="textblock">
-                    Additionally, it performs some other jobs that can be useful during a contest; it has a built-in
-                    (disk) caching feature for large pre-processed data, reads
-                    input and output files, automatically off-loads work onto multiple threads, bundles and compresses
-                    multiple source code files into one big file, and eliminates
-                    unneeded classes.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/ml-ann.png">
-                <h1>🧠 Machine Learning and Artifical Neural Networks 🧠</h1>
-                <p class="tagline">Helping Rachel on her quest to world domination</p>
-                <p class="links">
-                    <a href="https://n2d4.github.io/ml-ann/paper.pdf">Read the paper</a><br>
-                    <a href="https://github.com/N2D4/ml-ann">Source on GitHub</a><br>
-                    <a href="https://n2d4.github.io/ml-ann/qlearner/index.html">Try the Q-Learning visualizer</a>
-                </p>
-                <p class="textblock">
-                    I've been coding for a long time. Both my high school term papers were about artificial
-                    intelligence, one in philosophy and one in computer science. The latter
-                    is about helping Rachel, an artificial intelligence running on my computer, learn to play a simple
-                    card game so that she can finally take over the world.
-                </p>
-                <p class="textblock">
-                    To achieve her goal, Rachel uses Q-learning to understand the concept of a game state. For this
-                    purpose, I've created a visualization tool in Processing (using
-                    Java) which helps readers understand the concept of Q-learning. You can try this tool online using
-                    the link above.
-                </p>
-                <p class="textblock">
-                    Furthermore, I've implemented a simple feed-forward neural network in Java which can be used in
-                    conjunction with the Q-Learner, in a very similar (but heavily
-                    simplified!) fashion to what Google's DeepMind is doing with AlphaGo. It features several different
-                    activation functions and error propagation mechanisms.
-                    Combining the two allows Rachel to learn a very simple card game. For more information, please take
-                    a look at the paper! :D
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/fractal-flames.png">
-                <h1>🔥 fractal-flames 🔥</h1>
-                <p class="tagline">Generating nice pictures</p>
-                <p class="links">
-                    <a href="https://github.com/N2D4/processing-fractal-flames">Source and gallery on GitHub</a><br>
-                </p>
-                <p class="textblock">
-                    Invented by Scott Draves in 1992, Fractal Flames build the basis for programs like Electric Sheep
-                    and Apophysis. The algorithm procedurally creates nice-looking
-                    pictures from only a single initial seed. This technique is now commonly used in computer graphics
-                    to generate flame-like or chaotic structures.
-                </p>
-                <p class="textblock">
-                    What initially was just supposed to be a high school project for computer science class is now a
-                    fully working
-                    implementation of the original Fractal Flames algorithm, with a bunch of optional tweaks. It's both
-                    less efficient and
-                    less powerful than modern implementations like those mentioned above — yet still, it can serve as a
-                    reference
-                    implementation of the algorithm in Processing.
-                </p>
-            </div>
-            <div class="project">
-                <img src="assets/sbserver.png">
-                <h1>🎮 SBServer and SBAPI 🎮</h1>
-                <p class="tagline">Developing a Minecraft minigame server with friends</p>
-                <p class="links">
-                    With <a href="https://github.com/janniku9">Jannik Gartmann</a> (and others)
-                </p>
-                <p class="textblock">
-                    During high school, gaming after school has bonded our class together. One of the video games we
-                    played is called
-                    <i>Minecraft</i>, famous for many things; amongst them the countless modding and minigame
-                    communities. In a group of
-                    friends, we had been building a Minecraft minigame server — for this, Jannik and I have coded the
-                    required mods in Java.
-                </p>
-                <p class="textblock">
-                    The architecture is split into two mods. The first is SBAPI, a minigame API. Minecraft is a sandbox
-                    game and not a minigame toolkit, and as such creating
-                    minigame mods is a hassle. To make this a little easier, we built an entire abstraction layer on top
-                    of Minecraft, allowing you to build customizable minigames
-                    using only our API in a few lines of code, while leaving all the world generation, match-making,
-                    glitch prevention etc. to the API.
-                </p>
-                <p class="textblock">
-                    The other mod is SBServer. It contains the actual game logic and concepts of our server. Minigames
-                    include KitPvP (players choose one of many kits each unique
-                    with abilities, then fight in an arena), Bedwars (players defend their own bed whilst trying to
-                    destroy other players' beds), One in the Quiver (everyone gets a
-                    bow, every hit is a kill), Lobby Hockey (ice hockey, but in Minecraft), and many more. Most of these
-                    are popular games on many Minecraft servers among the
-                    community, but all our games always have unique features and twists which make them somewhat
-                    different.
-                </p>
-                <p class="textblock">
-                    The programming was done by Jannik and me, whereas various other friends worked with us on level
-                    building and game design/balance. We've also had several game
-                    testing sessions with a broader circle of friends to make sure our games are fair. SBServer had been
-                    a pet project for all of us for a very long time; in fact,
-                    I don't think there's any other project I've contributed as much code to as this one.
-                </p>
-            </div>
-            <div class="project">
-                <h1>...and there's always more!</h1>
-                <p class="textblock">
-                    Throughout the past few years, I've almost always been working on at least one coding project. While some of them I will gladly show to the world, a vast majority have either never seen the daylight or just aren't big enough to be an entry here. After all, who finishes every side project they start? :)
-                </p>
-                <p class="textblock">
-                    Some examples:
-                    <ul>
-                        <li>a food delivery app</li>
-                        <li>TV box software written for personal use on my Raspberry Pi</li>
-                        <li>a graphical IDE for making Minecraft modifications without programming experience</li>
-                        <li>a tool that can be used to crack LCGs (most notably java.util.Random)</li>
-                        <li><a href="https://cfour.n2d4.com" style="color: inherit;">a minimalistic Connect-Four game</a> with multiplayer and singleplayer (vs. computer) support</li>
-                        <li>a less polished linear algebra version of multiple-choices</li>
-                        <li><a href="https://n2d4.github.io/kelly" style="color: inherit;">a biased betting simulator</a></li>
-                        <li>a Discord bot using Markov chains to learn from my conversations</li>
-                        <li>countless game prototypes</li>
-                        <li><a href="https://stanza.ink" style="color: inherit;">a generative poem visualizer</a></li>
-                        <li>a Minecraft magic mod with spells, wands, and adventures</li>
-                    </ul>
-                    and more.
-                </p>
-                <p class="textblock">
-                    If you have any questions, drop me a message on <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> :D
-                </p>
+                </div>
+                <div class="project">
+                            <img src="assets/uncharted.png">
+                            <h1>📈 uncharted 📈</h1>
+                            <p class="tagline">A code-driven data visualization tool</p>
+                            <p class="links">
+                                <a href="https://n2d4.github.io/uncharted">Try it online!</a><br>
+                                <a href="https://github.com/N2D4/uncharted">Source on GitHub</a>
+                            </p>
+                            <p class="textblock">
+                                Hah, usually it's the other way around, coding being data-driven and stuff, isn't it? Anyways, a
+                                vast majority of my
+                                plotting needs are "I have a (possibly complex) function and want to see how it looks like with
+                                different
+                                parameters". Sure, there are ways to do that (matplotlib, Mathematica, etc.), but I figured I spend
+                                most of my time
+                                not on the function but on making the plots look nice. I mean, do I <i>really</i> have to care about
+                                step size just
+                                to watch two lines intersect? And I wanna share the plots, too. I'm not gonna teach my friends
+                                Octave to show them
+                                how gas emissions affect the climate.
+                            </p>
+                            <p class="textblock">
+                                Uncharted is an opinionated charting tool with "reasonable" defaults. It takes a TypeScript function
+                                and a bunch of
+                                parameter values and does exactly one thing, plot that. Utilizing inferred parameter & result types
+                                from
+                                TypeScript's compiler, it presents
+                                a UI to let you tweak the values as you wish. The app is built with SvelteKit and uses a
+                                cutting-edge web stack.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/deep-duel.png">
+                    <h1>⚔ Deep Duel ⚔</h1>
+                    <p class="tagline">A 2D multiplayer browser game</p>
+                    <p class="links">
+                        With <a href="https://github.com/realChesta">Kyrill Hux</a><br>
+                        <a href="https://github.com/realChesta/deep-duel">Source on GitHub</a><br>
+                    </p>
+                    <p class="textblock">
+                        While we initially started Deep Duel with the goal of making an AI learn to play a simple fighting
+                        game, we never ended up doing that and instead just
+                        emphasized on the fighting game part. Deep Duel is a fast-paced multiplayer duel game where you try
+                        to out-maneuver your opponent by hitting, dashing and
+                        shooting them on a two-dimensional plane.
+                    </p>
+                    <p class="textblock">
+                        Deep Duel is written in HTML, CSS, and JavaScript, using React for the UX elements, PixiJS for
+                        rendering and lance.gg as a multiplayer engine.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/contest-library.png">
+                    <h1>📚 Contest Library 📚</h1>
+                    <p class="tagline">Reusing algorithms at a low performance cost</p>
+                    <p class="links">
+                        <a href="https://github.com/N2D4/contest-library">Source on GitHub</a>
+                    </p>
+                    <p class="textblock">
+                        When participating in competitive programming contests, you often end up using the same algorithms
+                        over and over again. For this purpose, I've started putting
+                        them into a library where I can re-use them whenever. Being competitive by heart, this library now
+                        contains thousands of lines of code and many algorithms and
+                        data structures, such as sparse matrices, segment trees, range lists, primitive collections,
+                        multimaps, graphs, coloring, cycle detection, flow algorithms, tree
+                        traversal, prime factorization, modular arithmetic, string utilities, histograms, fast I/O, genetic
+                        optimization, and many more. Note that I can't just use
+                        third-party libraries as these are forbidden in most contests.
+                    </p>
+                    <p class="textblock">
+                        The number one goal is to learn more about the algorithms I'm implementing, which is why I'm always
+                        trying to find common ancestors of algorithms and data
+                        structures. For example, an adjacency list graph is equivalent to an adjacency matrix graph using a
+                        row-list sparse matrix, and Prim's algorithm is really just
+                        a special case of A* with a certain heuristics function. This kind of code re-use means that any
+                        performance improvement or heuristic I implement on the A*
+                        algorithm will subsequently also speed up Prim's.
+                    </p>
+                    <p class="textblock">
+                        It turns out that most competitive programmers use C++, and the exercises sometimes even expect you
+                        to. Java usually is slower, and the fact that I'm using an
+                        abstraction above everything does not help. Even though you'd expect constants to not matter in
+                        these contests, it turns out they do, and especially in Java
+                        where boxing and unboxing primitives is the default when working with generic types cache misses
+                        will generally do a huge difference. The library uses several
+                        tricks (eg. primitive collections) and heuristics (eg. using a linear search list instead of a hash
+                        map for small maps) to combat this.
+                    </p>
+                    <p class="textblock">
+                        Additionally, it performs some other jobs that can be useful during a contest; it has a built-in
+                        (disk) caching feature for large pre-processed data, reads
+                        input and output files, automatically off-loads work onto multiple threads, bundles and compresses
+                        multiple source code files into one big file, and eliminates
+                        unneeded classes.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/ml-ann.png">
+                    <h1>🧠 Machine Learning and Artifical Neural Networks 🧠</h1>
+                    <p class="tagline">Helping Rachel on her quest to world domination</p>
+                    <p class="links">
+                        <a href="https://n2d4.github.io/ml-ann/paper.pdf">Read the paper</a><br>
+                        <a href="https://github.com/N2D4/ml-ann">Source on GitHub</a><br>
+                        <a href="https://n2d4.github.io/ml-ann/qlearner/index.html">Try the Q-Learning visualizer</a>
+                    </p>
+                    <p class="textblock">
+                        I've been coding for a long time. Both my high school term papers were about artificial
+                        intelligence, one in philosophy and one in computer science. The latter
+                        is about helping Rachel, an artificial intelligence running on my computer, learn to play a simple
+                        card game so that she can finally take over the world.
+                    </p>
+                    <p class="textblock">
+                        To achieve her goal, Rachel uses Q-learning to understand the concept of a game state. For this
+                        purpose, I've created a visualization tool in Processing (using
+                        Java) which helps readers understand the concept of Q-learning. You can try this tool online using
+                        the link above.
+                    </p>
+                    <p class="textblock">
+                        Furthermore, I've implemented a simple feed-forward neural network in Java which can be used in
+                        conjunction with the Q-Learner, in a very similar (but heavily
+                        simplified!) fashion to what Google's DeepMind is doing with AlphaGo. It features several different
+                        activation functions and error propagation mechanisms.
+                        Combining the two allows Rachel to learn a very simple card game. For more information, please take
+                        a look at the paper! :D
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/fractal-flames.png">
+                    <h1>🔥 fractal-flames 🔥</h1>
+                    <p class="tagline">Generating nice pictures</p>
+                    <p class="links">
+                        <a href="https://github.com/N2D4/processing-fractal-flames">Source and gallery on GitHub</a><br>
+                    </p>
+                    <p class="textblock">
+                        Invented by Scott Draves in 1992, Fractal Flames build the basis for programs like Electric Sheep
+                        and Apophysis. The algorithm procedurally creates nice-looking
+                        pictures from only a single initial seed. This technique is now commonly used in computer graphics
+                        to generate flame-like or chaotic structures.
+                    </p>
+                    <p class="textblock">
+                        What initially was just supposed to be a high school project for computer science class is now a
+                        fully working
+                        implementation of the original Fractal Flames algorithm, with a bunch of optional tweaks. It's both
+                        less efficient and
+                        less powerful than modern implementations like those mentioned above — yet still, it can serve as a
+                        reference
+                        implementation of the algorithm in Processing.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src="assets/sbserver.png">
+                    <h1>🎮 SBServer and SBAPI 🎮</h1>
+                    <p class="tagline">Developing a Minecraft minigame server with friends</p>
+                    <p class="links">
+                        With <a href="https://github.com/janniku9">Jannik Gartmann</a> (and others)
+                    </p>
+                    <p class="textblock">
+                        During high school, gaming after school has bonded our class together. One of the video games we
+                        played is called
+                        <i>Minecraft</i>, famous for many things; amongst them the countless modding and minigame
+                        communities. In a group of
+                        friends, we had been building a Minecraft minigame server — for this, Jannik and I have coded the
+                        required mods in Java.
+                    </p>
+                    <p class="textblock">
+                        The architecture is split into two mods. The first is SBAPI, a minigame API. Minecraft is a sandbox
+                        game and not a minigame toolkit, and as such creating
+                        minigame mods is a hassle. To make this a little easier, we built an entire abstraction layer on top
+                        of Minecraft, allowing you to build customizable minigames
+                        using only our API in a few lines of code, while leaving all the world generation, match-making,
+                        glitch prevention etc. to the API.
+                    </p>
+                    <p class="textblock">
+                        The other mod is SBServer. It contains the actual game logic and concepts of our server. Minigames
+                        include KitPvP (players choose one of many kits each unique
+                        with abilities, then fight in an arena), Bedwars (players defend their own bed whilst trying to
+                        destroy other players' beds), One in the Quiver (everyone gets a
+                        bow, every hit is a kill), Lobby Hockey (ice hockey, but in Minecraft), and many more. Most of these
+                        are popular games on many Minecraft servers among the
+                        community, but all our games always have unique features and twists which make them somewhat
+                        different.
+                    </p>
+                    <p class="textblock">
+                        The programming was done by Jannik and me, whereas various other friends worked with us on level
+                        building and game design/balance. We've also had several game
+                        testing sessions with a broader circle of friends to make sure our games are fair. SBServer had been
+                        a pet project for all of us for a very long time; in fact,
+                        I don't think there's any other project I've contributed as much code to as this one.
+                    </p>
+                </div>
+                <div class="project">
+                    <h1>...and there's always more!</h1>
+                    <p class="textblock">
+                        Throughout the past few years, I've almost always been working on at least one coding project. While some of them I will gladly show to the world, a vast majority have either never seen the daylight or just aren't big enough to be an entry here. After all, who finishes every side project they start? :)
+                    </p>
+                    <p class="textblock">
+                        Some examples:
+                        <ul>
+                            <li>a food delivery app</li>
+                            <li>TV box software written for personal use on my Raspberry Pi</li>
+                            <li>a graphical IDE for making Minecraft modifications without programming experience</li>
+                            <li>a tool that can be used to crack LCGs (most notably java.util.Random)</li>
+                            <li><a href="https://cfour.n2d4.com" style="color: inherit;">a minimalistic Connect-Four game</a> with multiplayer and singleplayer (vs. computer) support</li>
+                            <li>a less polished linear algebra version of multiple-choices</li>
+                            <li><a href="https://n2d4.github.io/kelly" style="color: inherit;">a biased betting simulator</a></li>
+                            <li>a Discord bot using Markov chains to learn from my conversations</li>
+                            <li>countless game prototypes</li>
+                            <li><a href="https://stanza.ink" style="color: inherit;">a generative poem visualizer</a></li>
+                            <li>a Minecraft magic mod with spells, wands, and adventures</li>
+                        </ul>
+                        and more.
+                    </p>
+                    <p class="textblock">
+                        If you have any questions, drop me a message on <a href="mailto:n2d4xc@gmail.com">n2d4xc@gmail.com</a> :D
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -544,6 +594,7 @@
         <label for="sldshw11"></label>
         <label for="sldshw12"></label>
         <label for="sldshw13"></label>
+        <label for="sldshw14"></label>
     </div>
 
     <script>
@@ -563,6 +614,8 @@
         }
 
         document.addEventListener('keydown', e => (f => f && slplus(f))({ 37: -1, 39: 1 }[e.keyCode]));
+        document.querySelector('.slideshow-left').addEventListener('click', () => slplus(-1));
+        document.querySelector('.slideshow-right').addEventListener('click', () => slplus(1));
 
         // could use CSS animations for this as well...
         if (enableTransitions) {
@@ -669,9 +722,33 @@
 
             <div>
                 <div class="sectionheader">
-                    Experience
+                    Experience <span style="font-size: 70%; font-weight: normal; color: var(--text-col, rgb(81, 81, 81));">(some achievements <span class="emphasize">highlighted</span>)</span>
                 </div>
                 <table>
+                    <tr class="emphasize">
+                        <td><span class="nowrap"><span class="nowrap">Jun<span class="noprint">e</span> 2022</span> — <span class="nowrap">Nov<span class="noprint">ember</span> 2023</span></span></td>
+                        <td>
+                            <b class="tbtitle">Co-Founder, Waveline</b><br>
+                            <div class="textblock">
+                                <p>Co-founded Waveline (formerly Generai), a <b>Y Combinator</b> (W23) company that helps businesses integrate <b>AI</b> into their products</p>
+                                <p>In contact with various parts of startup life, from <b>product development</b> over <b>infrastructure & software architecture</b> to <b>sales & marketing</b> and <b>AI research</b></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="nowrap">Sep<span class="noprint">tember</span> 2020</span> — <span class="nowrap">Mar<span class="noprint">ch</span> 2023</span><br>
+                            <i class="noprint">(committee member since <span class="nowrap">February 2019</span>)</i>
+                        </td>
+                        <td>
+                            <b class="tbtitle">President of the ACM Committee, VIS @ ETHZ</b> <i class="nowrap">(volunteer)</i><br>
+                            <div class="textblock">
+                                <p><b>Organized coding competitions</b> for the 1800+ members of VIS, the Association of CS Students @ ETHZ</p>
+                                <p>Expanded our committee by <b>planning & executing</b> new contests & events, some in-house, partly with external partners & companies</p>
+                                <p><span class="noprint">Other volunteer roles at VIS include: Layouting for our quarterly magazine, co-organizing the Kontaktparty (largest academic IT recruiting fair in Switzerland)</span></p>
+                            </div>
+                        </td>
+                    </tr>
                     <tr>
                         <td><span class="nowrap"><span class="nowrap">Sep<span class="noprint">tember</span> 2021</span> - <span class="nowrap">Mar<span class="noprint">ch</span> 2022</span></span></td>
                         <td>
@@ -682,7 +759,7 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="emphasize">
                         <td><span class="nowrap"><span class="nowrap">Jun<span class="noprint">e</span></span> - <span class="nowrap">Sep<span class="noprint">tember</span> 2021</span></span></td>
                         <td>
                             <b class="tbtitle">Software Eng. Intern, Jane Street London</b><br>
@@ -692,21 +769,7 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="unimportant">
-                        <td>
-                            <span class="nowrap">Sep<span class="noprint">tember</span> 2020</span> — today<br>
-                            <i>(committee member since <span class="nowrap">February 2019</span>)</i>
-                        </td>
-                        <td>
-                            <b class="tbtitle">President of the CPC Committee, VIS @ ETHZ</b> <i class="nowrap">(volunteer)</i><br>
-                            <div class="textblock">
-                                <p>We <b>organize coding competitions</b> for the 1800+ members of VIS, the Association of CS Students @ ETHZ</p>
-                                <p>Expanded our committee by <b>planning & executing</b> new contests & events, some in-house, some with external partners & companies</p>
-                                <p><span class="noprint">Other volunteer roles at VIS include: Layouting for our quarterly magazine, co-organizing the Kontaktparty (largest academic IT recruiting fair in Switzerland), member of the CTF team</span></p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
+                    <tr class="emphasize">
                         <td><span class="nowrap">Jun<span class="noprint">e</span></span> — <span class="nowrap">Aug<span
                                     class="noprint">ust</span> 2020</span></td>
                         <td>
@@ -791,6 +854,17 @@
                 </div>
                 <table>
                     <tr>
+                        <td><span class="nowrap">Spring</span> — <span class="nowrap">Winter 2022</span></td>
+                        <td>
+                            <b class="tbtitle">Generai</b><br>
+                            <div class="textblock">
+                                <p>A state-of-the-art <b>AI image generation</b> platform before Stable Diffusion was a thing, with <b>over 10,000 total generations</b></p>
+                                <p>Built and deployed a <b>custom AI model & pipeline</b> with high uptime while <b>working tightly with customers</b></p>
+                                <p><a href="https://generai.art">https://generai.art</a></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
                         <td><span class="nowrap">Spring 2022</span></td>
                         <td>
                             <b class="tbtitle">Eternal Sunset</b><br>
@@ -825,7 +899,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><span class="nowrap">Winter 2018</span> — today</td>
+                        <td><span class="nowrap">Winter 2018</span> — <span class="nowrap">Summer 2019</span></td>
                         <td>
                             <b class="tbtitle">card-game</b><br>
                             <div class="textblock">
@@ -857,7 +931,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><span class="nowrap">Spring 2018</span> — today</td>
+                        <td><span class="nowrap">Spring 2018</span> — <span class="nowrap">Spring 2020</span></td>
                         <td>
                             <b class="tbtitle">Contest Library</b><br>
                             <div class="textblock">
@@ -907,6 +981,14 @@
                 </div>
                 <table>
                     <tr>
+                        <td>ICPC 2020-21</td>
+                        <td>
+                            <b class="titlecol">Rank 5/31382</b> (silver medal)<br>
+                            Coach<br>
+                            Huawei Outstanding Mentorship award
+                        </td>
+                    </tr>
+                    <tr>
                         <td>Google Code Jam 2019</td>
                         <td>
                             <b class="titlecol">Rank 1217/35559</b><br>
@@ -937,21 +1019,22 @@
             More About Me
         </div>
         <ul>
-            <li>
-                President of the CPC committee at VIS (Association of CS Students at ETH Zurich), organizing coding competitions for
-                our 1800+ members
+            <li class="unimportant">
+                Former President of the ACM committee at VIS (Association of CS Students at ETH Zurich), organizing coding competitions for our 1800+ members
             </li>
             <li>
                 Worked in several volunteer roles at VIS: Layouting for our quarterly magazine, co-organizing the Kontaktparty
                 (largest academic IT recruiting fair in Switzerland)
             </li>
             <li class="print">Previously worked as a teaching assistant for Discrete Mathematics</li>
-            <li class="print">
-                Invited to the Bloomberg New York Security Challenge after qualifying at a university-wide contest
+            <li>
+                Invited to the Bloomberg New York Security Challenge 2018 after a qualification contest
             </li>
             <li class="print">
-                Multiple top 5-10% finishes in coding competitions such as Google Hash Code, Code Jam, or Facebook
-                Hacker Cup
+                Multiple top 5-10% finishes in coding competitions such as Google Hash Code, Code Jam, or Facebook Hacker Cup
+            </li>
+            <li class="print">
+                Received Huawei Outstanding Mentorship award for the coaching I did for the ICPC 2020-21 World Finals Silver Medalists
             </li>
             <li>
                 Active GitHub and not-so-active Hackerrank accounts: <a href="https://github.com/N2D4">github.com/N2D4</a> and
@@ -966,14 +1049,12 @@
     <div style="font-size: 80%;">
         <sup>1</sup> Swiss grades from 1.0 (worst) to 6.0 (best). See: <a
             class="nowrap"
-            href="https://www.ethz.ch/content/dam/ethz/main/education/rechtliches-abschluesse/grading.pdf">https://www.ethz.ch/content/dam/ethz/main/education/rechtliches-abschluesse/grading.pdf</a>
-        <sup>2</sup> Remember when I planned to graduate in 2021? Yeah, that didn't happen. Instead I'm on a Master's and
-        already extended that one too, so I'll make no more promises ;) (that said: most likely estimation is finishing my
-        Master's in 2023)
+            href="https://www.ethz.ch/content/dam/ethz/main/education/rechtliches-abschluesse/grading.pdf">https://www.ethz.ch/content/dam/ethz/main/education/rechtliches-abschluesse/grading.pdf</a><br>
+        <sup>2</sup> Optimistic estimate. I'm technically "almost" done but I'm way too focussed on startup stuff right now to spend 6 months of opportunity cost on a thesis
     </div>
 
     <div style="font-size: 80%;" class="noprint">
-        Last updated September 6th, 2022.
+        Last updated November 12th, 2023.
     </div>
 
 
