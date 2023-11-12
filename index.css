@@ -419,7 +419,6 @@ span.emphasize {
 
 .slideshow-outer {
     position: relative;
-    width: 100%;
     border: 1px solid var(--border-col);
     border-radius: 12px;
     margin-top: 32px;
@@ -432,6 +431,17 @@ span.emphasize {
     height: 160px;
     cursor: pointer;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 900px) {
+    .slideshow-outer {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+
+    .slideshow-nav {
+        width: 64px;
+    }
 }
 
 .slideshow-nav:hover {
@@ -470,12 +480,12 @@ span.emphasize {
 .slideshow-nav > .el::before {
     position: absolute;
     content: '';
-    left: 0;
+    left: 4px;
     top: 50%;
     width: 64px;
     height: 12px;
     background-color: currentColor;
-    transform:  translateX(4px) rotate(-60deg);
+    transform: rotate(-60deg);
     transform-origin: left top;
 
     border-top-right-radius: 8px;
