@@ -137,21 +137,21 @@
                         <a href="https://generai.art/gallery">Visit the gallery</a>
                     </p>
                     <p class="textblock">
-                        In early 2022, Jan shared with me some AI image generation models he had found. It took me by storm; I was already impressed by the results of DALL-E at the time, but those models seemed a step up. As reasonable people do, we decided to try and make them even better.
+                        In early 2022, Jan shared with me some AI image generation models he had found. It took me by storm; I was already impressed by the results of DALL-E at the time, but those models seemed a step up. So we decided to try and make them even better.
                     </p>
                     <p class="textblock">
-                        At the time, there was no Stable Diffusion, and only one version of DALL-E. We gave it a shot, and went ahead to train & build a pipeline consisting of multiple models. We're pretty proud to say that we built a product rivaling Midjourney, at the time the closed-source-SOTA in image generation. We were also the only provider that could create 4K+ images.
+                        At the time, there was no Stable Diffusion, and only one version of DALL-E. We trained a pipeline consisting of language & image models and the results were really impressive; before the AI hype, the competition was kinda dog, and our model gave state-of-the-art outputs (which, at the time, was Midjourney). We were also the first to generate (decent) 4K+ images.
                     </p>
                     <img src="assets/generai-blades.jpeg" class="right">
                     <p class="textblock">
-                        And we built a platform around it. Turns out what we had can be sold! We got in touch with Stability AI and got pre-beta access for what would later become Stable Diffusion, were featured at the Zurich PopCon 2022, and got the chance to take the project to Y Combinator's W23 batch, starting what would later become <a href="https://nunu.ai" target="_blank">nunu.ai</a>. We never managed to make Generai pay our rent because we weren't particularly keen on the marketing part, and after a few months Stable Diffusion created a lot of strong competition in the space, but it was fun to try.
+                        So we built a platform around it. We got in touch with Stability AI and got pre-beta access for what would later become Stable Diffusion, were featured at the Zurich PopCon 2022, and got the chance to take the project to Y Combinator's W23 batch, starting what would later become <a href="https://nunu.ai" target="_blank">nunu.ai</a>. We never managed to make Generai pay our rent because we realized we don't really have any of the skills that B2C needs, and after a few months Stable Diffusion created a lot of strong competition in the space, but it was fun to try.
                     </p>
                     <p class="textblock">
-                        <i>Prompt engineering</i> was what people called the (at the time) fairly hard task of translating human thoughts into a prompt the machine does well on. Alongside parameter tuning, this was a significant blocker to getting good results. By analyzing over 3000 prompts submitted by our users, we built a collection of tricks into our UI to get the prompts a professional prompt engineer would've made.
+                        <i>Prompt engineering</i> was what people called the (at the time fairly hard) task of translating human thoughts into a prompt the machine does well on. Alongside parameter tuning, this was a significant blocker to getting good results. By analyzing over 3000 prompts submitted by our users, we built a collection of UX tricks and language models to get the prompts a professional prompt engineer would've made.
                     </p>
                     <img src="assets/generai-how-it-works.png">
                     <p class="textblock">
-                        Sadly, we were broke students, and didn't get to buy our own A100 GPU clusters. So we had to stick to 3090s that we rented off of Ethereum miners (a bubble that coincidentally just popped). It was painful! Turns out that crypto miners are not generally good server admins (we were seeing a server failure more than once a day on average), but it taught us how to build a resilient system that can handle a lot of crashing. This way, we reduced our hardware costs from ~$2-8 per image on the big cloud providers to about 10c.
+                        Sadly, we were broke students, and didn't get to buy our own A100 GPU clusters. So we had to stick to 3090s that we rented off of Ethereum miners (a bubble that coincidentally just popped). It was painful! Turns out that crypto miners are not generally good server admins (we were seeing a server failure more than once a day on average), but it taught us how to build a resilient system that can handle a lot of crashing. This way, we reduced our hardware costs from ~$2-8 per image on the big cloud providers to about 10c. At peak usage, we had over one hundred 3090s running at the same time.
                     </p>
                     <p class="textblock">
                         The platform was built on Firebase, with Next.js, in TypeScript and a Python backend. We used Google Cloud & Vercel for deployments, Shopify for our print store, and Stripe for payments.
@@ -726,10 +726,10 @@
                     <tr class="emphasize">
                         <td><span class="nowrap"><span class="nowrap">Jun<span class="noprint">e</span> 2022</span> – <span class="nowrap">Nov<span class="noprint">ember</span> 2023</span></span></td>
                         <td>
-                            <b class="tbtitle">Co-Founder, Waveline</b> <i>(now nunu.ai)</i><br>
+                            <b class="tbtitle">Co-Founder, nunu.ai</b><br>
                             <div class="textblock">
-                                <p>Co-founded Waveline (aka Generai, nunu.ai), a <b>Y Combinator</b> (W23) company that helps businesses integrate <b>AI</b> into their products</p>
-                                <p>In contact with various parts of startup life, from <b>product development</b> over <b>infrastructure & software architecture</b> to <b>sales & marketing</b> and <b>AI research</b></p>
+                                <p>Co-founded <a href="https://nunu.ai">nunu.ai</a> (aka Generai, Waveline), a <b>Y Combinator</b> (W23) company that (across pivotes) generated <b>AI</b> images, helped businesses <b>parse documents</b>, and built <b>AGI for games</b></p>
+                                <p>Experienced all the parts of startup life, from <b>product development</b> over <b>infrastructure & software architecture</b> to <b>sales & marketing</b> and <b>AI research</b></p>
                             </div>
                         </td>
                     </tr>
