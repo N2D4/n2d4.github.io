@@ -11,6 +11,16 @@
         gtag('config', 'UA-151064305-1');
     </script>
 
+    <script type="module">
+  import { HexclaveClientApp } from "https://esm.sh/@hexclave/js@1.0.112";
+
+  globalThis.hexclaveClientApp = new HexclaveClientApp({
+    projectId: "45dbd770-d3e0-4310-8bc2-da747275ab25",
+    tokenStore: "cookie",
+    urls: { default: { type: "hosted" } },
+  });
+</script>
+
     <title>Konstantin Wohlwend</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
